@@ -199,7 +199,6 @@ export const publicPages = {
       "Pascal",
       "Nietzsche",
       "Simone Weil",
-      "Hans Jonas",
       "Pensiero contemporaneo",
     ],
   },

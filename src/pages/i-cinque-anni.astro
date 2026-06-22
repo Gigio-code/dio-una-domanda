@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { years } from "../data/site";
+---
+
+<BaseLayout
+  title="I cinque anni"
+  description="La sequenza dei cinque anni del percorso DIO. UNA DOMANDA."
+>
+  <PageHero
+    eyebrow="I cinque anni"
+    title="Un percorso che accompagna la crescita"
+    intro="Ogni anno apre una domanda più grande: origine, corpo, libertà, coscienza, limite e futuro."
+  />
+  <section class="section shell year-stack">
+    {years.map((year) => (
+      <article class="year-card">
+        <div>
+          <p class="year-number">{year.year}</p>
+          <h2>{year.title}</h2>
+          <p>{year.question}</p>
+        </div>
+        <ul>
+          {year.themes.map((theme) => <li>{theme}</li>)}
+        </ul>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

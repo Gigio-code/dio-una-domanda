@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import ReservedArea from "../components/ReservedArea";
+---
+
+<BaseLayout
+  title="Area riservata"
+  description="Area classi con accesso leggero per materiali didattici non sensibili."
+>
+  <PageHero
+    eyebrow="Area riservata"
+    title="Materiali e percorsi per le classi"
+    intro="Una prima area protetta con prudenza: nessun dato personale, nessun voto, nessuna foto di minori."
+  />
+  <section class="section shell">
+    <ReservedArea client:load />
+  </section>
+</BaseLayout>

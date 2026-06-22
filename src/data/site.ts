@@ -20,32 +20,32 @@ export const navItems = [
 export const paths = [
   {
     title: "La domanda",
-    kicker: "Origine",
-    body: "Dio come parola difficile: immagine, desiderio, paura, speranza, relazione.",
+    kicker: "Parti da qui",
+    body: "Dio: risposta pronta o domanda scomoda?",
     href: "/la-domanda",
   },
   {
     title: "Mito e sacro",
-    kicker: "Raccontare l'indicibile",
-    body: "Da dove veniamo? Perché esiste qualcosa? Che cosa rende una cosa sacra?",
+    kicker: "Origini",
+    body: "Perché gli esseri umani raccontano l'invisibile?",
     href: "/mito-e-sacro",
   },
   {
     title: "Religioni",
-    kicker: "Popoli e culture",
-    body: "Tradizioni, riti, testi, identità, guerre, pace e modi diversi di cercare senso.",
+    kicker: "Mondi",
+    body: "Riti, testi, corpi, popoli. Non solo idee.",
     href: "/religioni",
   },
   {
     title: "Filosofia",
-    kicker: "Sapere, credere, dubitare",
-    body: "Dio come problema filosofico: bene, male, libertà, coscienza e limite.",
+    kicker: "Dubbi",
+    body: "Credere, sapere, dubitare: dove passa il confine?",
     href: "/filosofia",
   },
   {
     title: "Nuovi sacri",
     kicker: "Futuro",
-    body: "Spiritualità alternative, tecnologia, IA, carisma, manipolazione e nuovi altari.",
+    body: "Abbiamo smesso di credere o cambiato altari?",
     href: "/nuovi-sacri",
   },
 ];
@@ -53,19 +53,19 @@ export const paths = [
 export const methods = [
   {
     title: "Guardiamo",
-    body: "Film, serie, immagini, video, storie reali.",
+    body: "Film, immagini, storie reali.",
   },
   {
     title: "Confrontiamo",
-    body: "Religioni, filosofia, scienza, arte, attualità.",
+    body: "Religioni, filosofia, scienza, attualità.",
   },
   {
     title: "Discutiamo",
-    body: "Facciamo domande, anche scomode.",
+    body: "Domande anche scomode.",
   },
   {
     title: "Scegliamo",
-    body: "Alla fine conta anche chiedersi: io da che parte sto?",
+    body: "Io da che parte sto?",
   },
 ];
 

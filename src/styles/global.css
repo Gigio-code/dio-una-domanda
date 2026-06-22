@@ -1,14 +1,14 @@
 :root {
-  --bg: #171412;
-  --bg-soft: #221d1a;
-  --bg-band: #2a211e;
+  --bg: #050505;
+  --bg-soft: #10100f;
+  --bg-band: #0c0c0b;
   --cream: #f6eddb;
   --muted: #cdbfa9;
   --line: rgba(246, 237, 219, 0.16);
   --accent: #e85f4d;
   --accent-dark: #b84034;
   --button-text: #171412;
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
   color-scheme: dark;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -27,8 +27,8 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at 85% 0%, rgba(216, 79, 63, 0.18), transparent 32rem),
-    linear-gradient(180deg, #171412 0%, #201a17 48%, #171412 100%);
+    radial-gradient(circle at 100% 0%, rgba(232, 95, 77, 0.12), transparent 24rem),
+    var(--bg);
   color: var(--cream);
   line-height: 1.6;
 }
@@ -80,7 +80,7 @@ input {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid var(--line);
-  background: rgba(23, 20, 18, 0.88);
+  background: rgba(5, 5, 5, 0.9);
   backdrop-filter: blur(18px);
 }
 
@@ -95,41 +95,16 @@ input {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
-  color: var(--accent);
 }
 
-.logo svg {
-  width: 68px;
-  height: 68px;
-  flex: 0 0 auto;
+.logo img {
+  width: min(620px, 86vw);
+  height: auto;
 }
 
-.logo span {
-  display: grid;
-  color: var(--cream);
-  letter-spacing: 0.08em;
-  line-height: 1.05;
-}
-
-.logo strong,
-.logo em {
-  font-style: normal;
-}
-
-.logo em {
-  color: var(--muted);
-  font-size: 0.72rem;
-}
-
-.logo--compact svg {
-  width: 42px;
-  height: 42px;
-}
-
-.logo--compact span {
-  font-size: 0.88rem;
+.logo--compact img {
+  width: clamp(160px, 24vw, 270px);
 }
 
 .nav {
@@ -157,23 +132,23 @@ input {
 }
 
 .hero {
-  min-height: 82svh;
+  min-height: 78svh;
   display: grid;
   align-items: center;
-  padding: 56px 0 44px;
+  padding: 48px 0 40px;
 }
 
 .hero-grid {
   display: grid;
-  gap: 36px;
+  gap: 28px;
 }
 
 .hero-copy {
-  max-width: 760px;
+  max-width: 820px;
 }
 
 .subtitle {
-  margin: 26px 0 12px;
+  margin: 8px 0 12px;
   color: var(--accent);
   font-weight: 700;
   text-transform: uppercase;
@@ -197,12 +172,12 @@ h3 {
 
 h1 {
   max-width: 900px;
-  font-size: clamp(3.2rem, 11vw, 7.6rem);
+  font-size: clamp(2.6rem, 8vw, 5.8rem);
   letter-spacing: 0;
 }
 
 h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 4.4vw, 3.3rem);
 }
 
 h3 {
@@ -215,7 +190,7 @@ p {
 }
 
 .lead {
-  max-width: 780px;
+  max-width: 680px;
   color: var(--cream);
   font-size: clamp(1.15rem, 2.6vw, 1.55rem);
 }
@@ -276,12 +251,8 @@ input:focus-visible,
   text-underline-offset: 5px;
 }
 
-.hero-mark {
-  display: none;
-}
-
 .section {
-  padding-block: 64px;
+  padding-block: 52px;
 }
 
 .section-band {
@@ -294,7 +265,7 @@ input:focus-visible,
   display: grid;
   gap: 12px;
   max-width: 760px;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .eyebrow {
@@ -326,15 +297,14 @@ input:focus-visible,
 .interactive-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(246, 237, 219, 0.045);
-  box-shadow: var(--shadow);
+  background: rgba(246, 237, 219, 0.035);
 }
 
 .path-card {
   display: grid;
   gap: 12px;
-  min-height: 220px;
-  padding: 22px;
+  min-height: 170px;
+  padding: 18px;
   text-decoration: none;
 }
 
@@ -373,7 +343,7 @@ input:focus-visible,
   gap: 22px;
   margin-top: 28px;
   padding: 24px;
-  background: rgba(23, 20, 18, 0.66);
+  background: rgba(246, 237, 219, 0.055);
 }
 
 .interactive-panel h2 {
@@ -544,26 +514,8 @@ input:focus-visible,
   .hero-grid,
   .split,
   .footer-grid {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1fr;
     align-items: center;
-  }
-
-  .hero-mark {
-    display: grid;
-    place-items: center;
-    aspect-ratio: 1;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background:
-      radial-gradient(circle, rgba(216, 79, 63, 0.9), rgba(216, 79, 63, 0.08) 58%),
-      rgba(246, 237, 219, 0.04);
-  }
-
-  .hero-mark span {
-    color: var(--cream);
-    font-size: clamp(10rem, 18vw, 15rem);
-    font-weight: 900;
-    line-height: 1;
   }
 
   .path-grid {

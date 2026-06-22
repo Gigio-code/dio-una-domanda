@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import StudyBlocks from "../components/StudyBlocks.astro";
+import { publicPages } from "../data/site";
+
+const page = publicPages.filosofia;
+---
+
+<BaseLayout title={page.eyebrow} description={page.intro}>
+  <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
+  <section class="section shell">
+    <StudyBlocks guide={page.guide} crosses={page.crosses} activities={page.activities} />
+    <div class="list-grid">
+      {page.items.map((item) => <article>{item}</article>)}
+    </div>
+  </section>
+</BaseLayout>

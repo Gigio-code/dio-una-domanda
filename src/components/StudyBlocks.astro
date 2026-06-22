@@ -1,0 +1,22 @@
+---
+const { guide, crosses = [], activities = [] } = Astro.props;
+---
+
+<div class="study-grid">
+  <article>
+    <p class="eyebrow">Domanda guida</p>
+    <h2>{guide}</h2>
+  </article>
+  <article>
+    <p class="eyebrow">Cosa attraversiamo</p>
+    <ul>
+      {crosses.map((item: string) => <li>{item}</li>)}
+    </ul>
+  </article>
+  <article>
+    <p class="eyebrow">Attività possibili</p>
+    <ul>
+      {activities.map((item: string) => <li>{item}</li>)}
+    </ul>
+  </article>
+</div>

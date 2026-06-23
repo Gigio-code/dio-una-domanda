@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Logo from "../components/Logo.astro";
 import QuestionDeck from "../components/QuestionDeck";
-import { methods, paths, site, years } from "../data/site";
+import { methods, paths, site, studentVoices, years } from "../data/site";
 ---
 
 <BaseLayout title={site.title} description={site.description}>
@@ -12,15 +12,29 @@ import { methods, paths, site, years } from "../data/site";
       <div class="hero-copy">
         <h1>Dio: risposta pronta o domanda scomoda?</h1>
         <p class="lead">
-          Un percorso per capire cosa cerchiamo quando parliamo di senso,
-          paura, libertà e futuro.
+          Questo sito non ti dice cosa credere. Ti aiuta a capire che cosa stai cercando.
         </p>
+        <div class="manifesto-lines" aria-label="Manifesto del percorso">
+          <p>Non devi uscire con una risposta pronta.</p>
+          <p>Ma con domande più vere.</p>
+          <p>E con più coscienza di ciò che stai diventando.</p>
+        </div>
         <div class="hero-actions" aria-label="Azioni principali">
           <a class="button" href="/la-domanda">Inizia da una domanda</a>
-          <a class="text-link" href="/i-cinque-anni">Vedi i percorsi</a>
+          <a class="text-link" href="/i-cinque-anni">Vedi il viaggio dei cinque anni</a>
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="section shell feature-strip" aria-label="Come funziona">
+    <article>
+      <p class="eyebrow">Come funziona</p>
+      <h2>Non religione come risposta già pronta. Religione come domanda che ti riguarda.</h2>
+    </article>
+    <article>
+      <p>Si parte da film, immagini, scene quotidiane, domande anonime, casi reali e discussioni.</p>
+    </article>
   </section>
 
   <section class="section shell">
@@ -59,12 +73,27 @@ import { methods, paths, site, years } from "../data/site";
 
   <section class="section shell split">
     <div>
-      <p class="eyebrow">Area riservata</p>
-      <h2>Materiali per lavorare in classe.</h2>
+      <p class="eyebrow">Detto da voi</p>
+      <h2>Qui dentro potresti esserci anche tu.</h2>
       <p>
-        Solo percorsi e schede. Niente voti, foto o dati personali.
+        Domande e frasi anonime raccolte in classe: nessun nome, nessuna etichetta, solo tracce vere di ricerca.
       </p>
-      <a class="button" href="/area-riservata">Vai all'area riservata</a>
+    </div>
+    <div class="student-voice-grid">
+      {studentVoices.map((voice) => (
+        <blockquote class="student-voice">“{voice}”</blockquote>
+      ))}
+    </div>
+  </section>
+
+  <section class="section shell split">
+    <div>
+      <p class="eyebrow">Materiali per la classe</p>
+      <h2>Schede, immagini, attività brevi.</h2>
+      <p>
+        L'area contiene materiali didattici non sensibili: niente voti, foto o dati personali.
+      </p>
+      <a class="button" href="/area-riservata">Guarda cosa c'è dentro</a>
     </div>
     <div class="mini-timeline">
       {years.map((year) => (

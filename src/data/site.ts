@@ -17,55 +17,18 @@ export const navItems = [
 ];
 
 export const paths = [
-  {
-    title: "La domanda",
-    kicker: "Parti da qui",
-    body: "Dio chiude il discorso o apre una ricerca?",
-    href: "/la-domanda",
-  },
-  {
-    title: "Mito e sacro",
-    kicker: "Origini",
-    body: "Quando la spiegazione non basta, che cosa raccontiamo?",
-    href: "/mito-e-sacro",
-  },
-  {
-    title: "Religioni",
-    kicker: "Gesti",
-    body: "Cibo, feste, preghiere, testi: la religione si vede anche nel corpo.",
-    href: "/religioni",
-  },
-  {
-    title: "Filosofia",
-    kicker: "Dubbi",
-    body: "Credo, dubito, scelgo: dove nasce una coscienza?",
-    href: "/filosofia",
-  },
-  {
-    title: "Nuovi sacri",
-    kicker: "Adesso",
-    body: "Algoritmo, corpo, like, IA: abbiamo cambiato altari?",
-    href: "/nuovi-sacri",
-  },
+  { title: "La domanda", kicker: "Parti da qui", body: "Dio chiude il discorso o apre una ricerca?", href: "/la-domanda" },
+  { title: "Mito e sacro", kicker: "Origini", body: "Quando la spiegazione non basta, che cosa raccontiamo?", href: "/mito-e-sacro" },
+  { title: "Religioni", kicker: "Gesti", body: "Cibo, feste, preghiere, testi: la religione si vede anche nel corpo.", href: "/religioni" },
+  { title: "Filosofia", kicker: "Dubbi", body: "Credo, dubito, scelgo: dove nasce una coscienza?", href: "/filosofia" },
+  { title: "Nuovi sacri", kicker: "Adesso", body: "Algoritmo, corpo, like, IA: abbiamo cambiato altari?", href: "/nuovi-sacri" },
 ];
 
 export const methods = [
-  {
-    title: "Guardiamo",
-    body: "Film, immagini, scene quotidiane.",
-  },
-  {
-    title: "Mettiamo in crisi",
-    body: "Una frase, un caso, una scelta difficile.",
-  },
-  {
-    title: "Discutiamo",
-    body: "Domande vere, anche scomode.",
-  },
-  {
-    title: "Prendiamo posizione",
-    body: "Non per avere ragione: per capire meglio.",
-  },
+  { title: "Guardiamo", body: "Film, immagini, scene quotidiane." },
+  { title: "Mettiamo in crisi", body: "Una frase, un caso, una scelta difficile." },
+  { title: "Discutiamo", body: "Domande vere, anche scomode." },
+  { title: "Prendiamo posizione", body: "Non per avere ragione: per capire meglio." },
 ];
 
 export const studentVoices = [
@@ -81,56 +44,55 @@ export const years = [
     title: "Da dove nasce la domanda religiosa?",
     question: "Che cosa cerca l'essere umano quando inventa, nomina o immagina Dio?",
     forYou: "Dio è un volto, una parola, una storia, una paura?",
-    inClass:
-      "Partiamo da parole, miti, immagini di Dio e racconti di origine. Poi proviamo anche a creare una religione per capire come funziona.",
+    inClass: "Partiamo da parole anonime, miti, immagini di Dio e racconti di origine. Poi proviamo anche a creare una religione per capire come funziona.",
     themes: ["mito", "sacro/profano", "immagini di Dio", "libri sacri", "religioni nuove"],
     materials: ["Dio in una parola", "Enuma Elish e Genesi", "domande dei bambini su Dio", "crea una religione"],
-    expandable: ["MITO", "risposte alle domande dei bambini", "catalogo religioni nuovissime", "interpretazione dei testi sacri"],
+    activities: ["mappa anonima delle parole su Dio", "confronto tra due racconti di origine", "laboratorio: crea una religione"],
+    expandable: ["preghiera", "religione sana/malata", "Natan il saggio", "catalogo religioni nuovissime", "interpretazione dei testi sacri"],
   },
   {
     year: "2ª",
     title: "Come la religione entra nei gesti?",
     question: "Una religione è solo un'idea o diventa corpo, cibo, rito, appartenenza?",
     forYou: "Quando una tua abitudine diventa quasi sacra?",
-    inClass:
-      "Osserviamo riti, preghiere, cibo, feste e appartenenze. Usiamo film, casi, piatti, simboli e gesti concreti.",
+    inClass: "Osserviamo riti, preghiere, cibo, feste e appartenenze. Usiamo film, casi, piatti, simboli e gesti concreti.",
     themes: ["riti", "preghiera", "cibo", "corpo", "appartenenza"],
     materials: ["Abe", "Bangla", "telefono sacro/profano", "creare un rito"],
-    expandable: ["PREGHIERA rito", "CIBO rito", "riti di iniziazione", "libertà religiosa"],
+    activities: ["osservare un gesto quotidiano come rito", "costruire un rito di passaggio", "confrontare cibo, digiuno e festa"],
+    expandable: ["preghiera comparata e fusion", "puro/impuro", "peccato e perdono", "devozione e superstizione", "social e bisogno di controllo"],
   },
   {
     year: "3ª",
     title: "Credere è libertà, identità o conflitto?",
     question: "Sono libero di credere, non credere, cambiare, restare, dialogare?",
     forYou: "Quando una scelta ti fa sentire libero e quando ti fa sentire fuori posto?",
-    inClass:
-      "Lavoriamo su coscienza, fratture religiose, libertà, identità e conflitti. Non per semplificare, ma per capire che cosa si rompe e che cosa può nascere.",
+    inClass: "Lavoriamo su coscienza, fratture religiose, libertà, identità e conflitti. Non per semplificare, ma per capire che cosa si rompe e che cosa può nascere.",
     themes: ["coscienza", "libertà religiosa", "fratture", "pluralismo", "giustizia"],
-    materials: ["religioni nate da crisi", "Gandhi, Cusano, Eckhart", "legge sacra e libertà personale", "sessualità e religioni"],
-    expandable: ["fratture religiose", "persone libere", "libertà di coscienza", "ordine e libertà"],
+    materials: ["Sharmin", "Rapporto ACS", "Dio liberami da Dio", "Gandhi, Cusano, Eckhart"],
+    activities: ["teatro su finali possibili", "distinguere fede, paura, istituzione e potere", "ricercare una persona libera"],
+    expandable: ["Due sotto il burqa", "Cristoterapia", "male e diavolo", "articolo 8", "diritti umani", "Laudato si"],
   },
   {
     year: "4ª",
-    title: "Che cosa forma la coscienza?",
-    question: "Da dove capisco che una cosa è giusta? Obbedire basta?",
-    forYou: "Che cosa fai quando una regola ti sembra sbagliata?",
-    inClass:
-      "Entriamo nei casi morali: legge, potere, bene, male, tentazione, responsabilità. A volte si parte da un film, a volte da una scelta impossibile.",
-    themes: ["bene/male", "legge", "potere", "sviluppo morale", "responsabilità"],
-    materials: ["Kohlberg", "gioco TENTAZIONE", "se io fossi un dio", "Avvocato del diavolo"],
-    expandable: ["coscienza morale", "onnipotenza e male", "sviluppo morale", "scritti aggregati anonimi"],
+    title: "Che cosa succede sulle frontiere?",
+    question: "Che cosa accade quando il sacro incontra potere, corpo, Stato, scienza e tecnologia?",
+    forYou: "Chi decide che cosa è giusto quando non basta dire: si è sempre fatto così?",
+    inClass: "Entriamo nei confini difficili: legge, religione, corpo, bioetica, IA, fiducia, potere. Non per fare tifo, ma per leggere i conflitti.",
+    themes: ["frontiere", "Stato e Chiesa", "bioetica", "donne e religioni", "IA"],
+    materials: ["KAOS", "Patti Lateranensi", "principi di Toledo", "Homo Deus"],
+    activities: ["leggere un dilemma bioetico", "confrontare norma religiosa e legge dello Stato", "analizzare una promessa tecnologica"],
+    expandable: ["Abitare la frontiera", "fiducia, corpo, sacro", "sette e manipolazione", "memoria ed eugenetica", "datismo"],
   },
   {
     year: "5ª",
     title: "Che cosa resta del sacro oggi?",
-    question:
-      "Che cosa resta dell'umano davanti a morte, crisi del sacro, tecnologia, IA e futuro?",
+    question: "Che cosa resta dell'umano davanti a morte, crisi del sacro, tecnologia, IA e futuro?",
     forYou: "Chi o che cosa prende oggi il posto di Dio?",
-    inClass:
-      "Mettiamo insieme limite, morte, bioetica, IA, dati, corpo, potere e futuro. Qui la domanda diventa: che persona sto diventando?",
+    inClass: "Mettiamo insieme limite, morte, bioetica, IA, dati, corpo, potere e futuro. Qui la domanda diventa: che persona sto diventando?",
     themes: ["morte", "destino", "Stato-Chiesa", "bioetica", "IA"],
     materials: ["KAOS", "Homo Deus", "Palantir", "Uglies / Pretty & Perfetti"],
-    expandable: ["religione dei dati", "IA quale relazione", "lettere politiche sulla religione", "restituzioni dopo cinque anni"],
+    activities: ["confrontare Dio è morto e Dio dilaga", "scrivere una domanda che resta", "analizzare una promessa dell'IA"],
+    expandable: ["Nietzsche", "Camus", "Halik", "Anticristo", "grazia e confini", "restituzioni anonime dopo cinque anni"],
   },
 ];
 
@@ -138,140 +100,92 @@ export const publicPages = {
   domanda: {
     eyebrow: "La domanda",
     title: "Dio c'entra ancora con la mia vita?",
-    intro:
-      "Non devi uscire con una risposta pronta. Qui provi a capire quali domande ti restano addosso.",
+    intro: "Non devi uscire con una risposta pronta. Qui provi a capire quali domande ti restano addosso.",
     guide: "Dio è una parola che chiude il discorso o apre una ricerca?",
     forYou: "Quando senti la parola Dio, ti avvicini o ti chiudi?",
-    inClass:
-      "Partiamo da parole anonime, immagini, dubbi veri e una domanda che non si lascia chiudere in fretta.",
+    inClass: "Partiamo da parole anonime, immagini, dubbi veri e una domanda che non si lascia chiudere in fretta.",
     symbol: "Una parola scritta al buio: Dio.",
-    crosses: [
-      "immagini personali e culturali di Dio",
-      "desiderio, paura, speranza e rifiuto",
-      "domande che restano anche quando non si crede",
-    ],
-    activities: [
-      "mappa anonima delle parole associate a Dio",
-      "scelta di una domanda da portare in discussione",
-      "scrittura breve: una domanda che non riesco a chiudere",
-    ],
-    questions: [
-      "Che cosa ti viene in mente quando senti la parola Dio?",
-      "Si può cercare Dio anche senza sapere se ci si crede?",
-      "Cosa vorresti che nessuno decidesse al posto tuo?",
-    ],
+    crosses: ["immagini personali e culturali di Dio", "desiderio, paura, speranza e rifiuto", "domande che restano anche quando non si crede"],
+    activities: ["mappa anonima delle parole associate a Dio", "scelta di una domanda da portare in discussione", "scrittura breve: una domanda che non riesco a chiudere"],
+    questions: ["Che cosa ti viene in mente quando senti la parola Dio?", "Si può cercare Dio anche senza sapere se ci si crede?", "Cosa vorresti che nessuno decidesse al posto tuo?"],
   },
   mito: {
     eyebrow: "Mito e sacro",
     title: "Quando la spiegazione non basta",
-    intro:
-      "Il mito non è una favola stupida. È un modo antico e potente per dire ciò che una spiegazione normale non riesce a tenere.",
+    intro: "Il mito non è una favola stupida. È un modo antico e potente per dire ciò che una spiegazione normale non riesce a tenere.",
     guide: "Che cosa prova a dire un racconto quando la spiegazione non basta?",
     forYou: "Ti è mai capitato di vivere qualcosa che non riuscivi a spiegare bene?",
-    inClass:
-      "Leggiamo miti di origine, guardiamo simboli, distinguiamo favola, storia e verità. Poi proviamo a creare una domanda sull'origine.",
+    inClass: "Leggiamo miti di origine, guardiamo simboli, distinguiamo favola, storia e verità. Poi proviamo a creare una domanda sull'origine.",
     symbol: "Fuoco, cielo, abisso: tre immagini per dire l'inizio.",
-    crosses: [
-      "racconti di origine",
-      "sacro e profano nella vita quotidiana",
-      "differenza tra favola, mito, storia e verità",
+    crosses: ["racconti di origine", "sacro e profano nella vita quotidiana", "differenza tra favola, mito, storia e verità"],
+    activities: ["confronto tra Enuma Elish, Genesi e altri miti", "ricerca di oggetti, luoghi o gesti che diventano sacri", "laboratorio: inventare un mito senza ridurlo a barzelletta"],
+    cards: [
+      { title: "Quando il mondo comincia", body: "Tante culture hanno immaginato un inizio. Non solo per spiegare, ma per orientarsi.", question: "Che cosa cambia se il mondo nasce dal caso, da una lotta o da una parola?" },
+      { title: "Il diluvio e la paura di ricominciare", body: "Acqua, distruzione, salvezza: un racconto torna in tradizioni diverse.", question: "Perché certe storie sembrano antiche eppure parlano ancora?" },
+      { title: "Il rito dice l'invisibile", body: "Un gesto può tenere insieme memoria, corpo e appartenenza.", question: "Cosa cambia se lo fai da solo o con altri?" },
+      { title: "Simboli che parlano ancora", body: "Albero, fuoco, luce, soglia: immagini antiche dentro la vita di oggi.", question: "Che cosa per te è quasi intoccabile?" },
     ],
-    activities: [
-      "confronto tra Enuma Elish, Genesi e altri miti",
-      "ricerca di oggetti, luoghi o gesti che diventano sacri",
-      "laboratorio: inventare un mito senza ridurlo a barzelletta",
-    ],
-    questions: [
-      "Il mito è falso o dice verità in un altro modo?",
-      "Che cosa oggi è intoccabile?",
-      "Il sacro è fuori dal mondo o dentro le cose quotidiane?",
-    ],
+    archive: ["miti di creazione", "Genesi ed Enuma Elish", "diluvio", "eroi fondatori", "albero, montagna, acqua, fuoco, cielo", "Eliade", "Campbell", "Girard", "antropologia del rito"],
+    questions: ["Il mito è falso o dice verità in un altro modo?", "Che cosa oggi è intoccabile?", "Il sacro è fuori dal mondo o dentro le cose quotidiane?"],
   },
   religioni: {
     eyebrow: "Religioni",
     title: "Non solo idee: gesti, corpi, popoli",
-    intro:
-      "Una religione non sta solo nei libri. Sta anche nel cibo, nel calendario, nei riti, nelle feste, nei conflitti e nei modi di abitare il mondo.",
+    intro: "Una religione non sta solo nei libri. Sta anche nel cibo, nel calendario, nei riti, nelle feste, nei conflitti e nei modi di abitare il mondo.",
     guide: "Come si comprende una religione senza ridurla a stereotipo?",
     forYou: "Che cosa ti fa sentire parte di qualcosa?",
-    inClass:
-      "Guardiamo riti, testi, cibo, preghiere e casi reali. Non per giudicare in fretta, ma per capire prima di semplificare.",
+    inClass: "Guardiamo riti, testi, cibo, preghiere e casi reali. Non per giudicare in fretta, ma per capire prima di semplificare.",
     symbol: "Pane, acqua, libro, porta: quattro gesti per entrare in una tradizione.",
-    crosses: [
-      "testi, riti, feste e pratiche quotidiane",
-      "identità, popoli, culture, guerre e pace",
-      "dialogo tra tradizioni diverse",
+    crosses: ["testi, riti, feste e pratiche quotidiane", "identità, popoli, culture, guerre e pace", "dialogo tra tradizioni diverse"],
+    activities: ["osservare un rito e chiedersi che cosa comunica", "confrontare cibo, preghiera e calendario in religioni diverse", "discutere appartenenza, uscita e libertà religiosa"],
+    cards: [
+      { title: "Un solo Dio? Molti dei?", body: "Le religioni non parlano tutte di Dio nello stesso modo. Alcune non usano nemmeno la parola Dio come te l'aspetti.", question: "Prima di giudicare, sai capire che cosa l'altro sta cercando?" },
+      { title: "Testi sacri", body: "Bibbia, Corano, Veda, Sutra: non solo libri, ma mondi che fondano comunità.", question: "Quando una parola diventa più grande di chi la legge?" },
+      { title: "Pregare, meditare, celebrare", body: "Riti, silenzi, feste e digiuni dicono che la religione passa anche dal corpo.", question: "Perché certi gesti contano solo se qualcuno li condivide?" },
+      { title: "Il male e la salvezza", body: "Peccato, karma, perdono, liberazione: parole diverse per una domanda comune.", question: "Da che cosa una persona chiede di essere salvata?" },
+      { title: "Ponti o muri?", body: "Le religioni possono creare casa, identità, pace. Possono anche diventare confine e conflitto.", question: "Quando l'appartenenza protegge e quando esclude?" },
     ],
-    activities: [
-      "osservare un rito e chiedersi che cosa comunica",
-      "confrontare cibo, preghiera e calendario in religioni diverse",
-      "discutere appartenenza, uscita e libertà religiosa",
-    ],
-    items: [
-      "Ebraismo, cristianesimo, islam: libri, gesti, memoria",
-      "Induismo, buddhismo e tradizioni orientali",
-      "Riti, cibo, preghiera, feste, corpo",
-      "Donne e religioni",
-      "Religioni, popoli, culture, guerre, pace, identità",
-      "Libertà religiosa: restare, cambiare, uscire",
-    ],
+    archive: ["ebraismo", "cristianesimo", "islam", "induismo", "buddhismo", "testi fondativi", "luoghi santi", "feste e calendario", "figure chiave", "religioni in Italia", "dialogo interreligioso"],
+    items: ["Ebraismo, cristianesimo, islam: libri, gesti, memoria", "Induismo, buddhismo e tradizioni orientali", "Riti, cibo, preghiera, feste, corpo", "Donne e religioni", "Religioni, popoli, culture, guerre, pace, identità", "Libertà religiosa: restare, cambiare, uscire"],
   },
   filosofia: {
     eyebrow: "Filosofia",
     title: "Credo, dubito, scelgo",
-    intro:
-      "La filosofia non serve a fare i difficili. Serve quando una domanda non si lascia chiudere: Dio, male, libertà, coscienza, limite.",
+    intro: "La filosofia non serve a fare i difficili. Serve quando una domanda non si lascia chiudere: Dio, male, libertà, coscienza, limite.",
     guide: "Che differenza c'è tra credere, sapere e dubitare?",
     forYou: "Che cosa fai quando non sei sicuro, ma devi scegliere lo stesso?",
-    inClass:
-      "Partiamo da un dilemma, una frase, un autore o una scena. Poi proviamo a difendere una posizione senza fingere che sia facile.",
+    inClass: "Partiamo da un dilemma, una frase, un autore o una scena. Poi proviamo a difendere una posizione senza fingere che sia facile.",
     symbol: "Due frasi una davanti all'altra: credo / dubito.",
-    crosses: [
-      "Dio e il male",
-      "coscienza, legge, libertà e responsabilità",
-      "fede, dubbio, nichilismo e immagini di Dio",
+    crosses: ["Dio e il male", "coscienza, legge, libertà e responsabilità", "fede, dubbio, nichilismo e immagini di Dio"],
+    activities: ["duello di frasi: credo / dubito, obbedisco / interpreto", "lettura breve di un autore con una domanda personale", "scrittura di una posizione motivata su un caso morale"],
+    cards: [
+      { title: "Dio si può dimostrare?", body: "Alcuni filosofi hanno cercato prove. Altri hanno chiesto se tutto ciò che conta debba essere dimostrabile.", question: "Una cosa non dimostrata è per forza falsa?" },
+      { title: "Se esiste il male, dov'è Dio?", body: "Dolore innocente, libertà, giustizia: qui le risposte facili si rompono.", question: "Che cosa fai quando una spiegazione non consola?" },
+      { title: "Nietzsche: Dio è morto?", body: "Non solo uno slogan. Una domanda su cosa succede quando crollano i valori.", question: "Se togli Dio, che cosa resta in piedi?" },
+      { title: "Ateismo, agnosticismo, fede", body: "Negare, sospendere, affidarsi: tre posizioni diverse, spesso confuse.", question: "Tu stai rifiutando, cercando o aspettando?" },
+      { title: "Scienza e Dio", body: "La scienza spiega molto. Ma il senso non sempre entra in una formula.", question: "Spiegare il mondo basta a sapere come viverci?" },
     ],
-    activities: [
-      "duello di frasi: credo / dubito, obbedisco / interpreto",
-      "lettura breve di un autore con una domanda personale",
-      "scrittura di una posizione motivata su un caso morale",
-    ],
-    items: [
-      "Platone e Aristotele",
-      "Agostino e Tommaso",
-      "Pascal",
-      "Nietzsche",
-      "Simone Weil",
-      "Feuerbach, Spinoza, Jung, Camus",
-      "Meister Eckhart e la libertà da immagini troppo piccole di Dio",
-    ],
+    archive: ["Platone", "Aristotele", "Agostino", "Anselmo", "Tommaso", "Pascal", "Kant", "Nietzsche", "Feuerbach", "Marx", "Freud", "Kierkegaard", "Simone Weil", "prove dell'esistenza di Dio", "critica della religione", "nichilismo", "fede e ragione"],
+    items: ["Platone e Aristotele", "Agostino e Tommaso", "Pascal", "Nietzsche", "Simone Weil", "Feuerbach, Spinoza, Jung, Camus", "Meister Eckhart e la libertà da immagini troppo piccole di Dio"],
   },
   nuoviSacri: {
     eyebrow: "Nuovi sacri",
     title: "Abbiamo smesso di credere o cambiato altari?",
-    intro:
-      "Il sacro non sparisce sempre. A volte cambia forma: successo, corpo, algoritmo, visibilità, controllo, IA, promessa di salvezza.",
+    intro: "Il sacro non sparisce sempre. A volte cambia forma: successo, corpo, algoritmo, visibilità, controllo, IA, promessa di salvezza.",
     guide: "Che cosa diventa sacro quando il sacro tradizionale perde forza?",
     forYou: "Quanto vali quando nessuno reagisce?",
-    inClass:
-      "Analizziamo scene vicine: social, IA, corpo perfetto, carisma, potere, dati. Cerchiamo la differenza tra ricerca, cura e manipolazione.",
+    inClass: "Analizziamo scene vicine: social, IA, corpo perfetto, carisma, potere, dati. Cerchiamo la differenza tra ricerca, cura e manipolazione.",
     symbol: "Uno schermo acceso come un piccolo altare.",
-    crosses: [
-      "successo, corpo, visibilità e prestazione",
-      "carisma, potere e manipolazione",
-      "tecnologia, IA, avatar religiosi e datismo",
+    crosses: ["successo, corpo, visibilità e prestazione", "carisma, potere e manipolazione", "tecnologia, IA, avatar religiosi e datismo"],
+    activities: ["analisi di un caso di carisma e potere", "discussione su tecnologia e promessa di salvezza", "griglia per distinguere ricerca, cura e manipolazione"],
+    cards: [
+      { title: "Idoli moderni", body: "Non statue antiche, ma successo, immagine, denaro, visibilità.", question: "Che cosa difendi come se fosse intoccabile?" },
+      { title: "Il corpo come tempio", body: "Cura, fitness, bellezza, controllo: libertà o nuova pressione?", question: "Il corpo è tuo anche quando tutti lo guardano?" },
+      { title: "Tecnologia e immortalità", body: "IA, dati, memoria digitale: il sogno di superare il limite umano cambia forma.", question: "Essere ricordati online è davvero restare vivi?" },
+      { title: "Riti digitali", body: "Like, stories, challenge, fandom: gesti ripetuti che creano appartenenza.", question: "Quando una piattaforma diventa un luogo sacro?" },
+      { title: "Natura sacra?", body: "Ecologia, clima, Terra: il pianeta torna a essere un luogo che chiede rispetto.", question: "Si può proteggere qualcosa senza adorarlo?" },
     ],
-    activities: [
-      "analisi di un caso di carisma e potere",
-      "discussione su tecnologia e promessa di salvezza",
-      "griglia per distinguere ricerca, cura e manipolazione",
-    ],
-    questions: [
-      "Algoritmo: chi sceglie cosa desideri?",
-      "Corpo: è immagine, limite o casa?",
-      "Like: quanto vali quando nessuno reagisce?",
-      "Controllo: se puoi controllare tutto, sei più libero?",
-      "IA: una macchina può capire chi sei?",
-    ],
+    archive: ["successo", "immagine", "denaro", "visibilità", "like", "algoritmo", "IA", "datismo", "transumanesimo", "fandom", "spiritualità senza religione", "mindfulness", "complottismi", "politica come religione", "ecologia profonda"],
+    questions: ["Algoritmo: chi sceglie cosa desideri?", "Corpo: è immagine, limite o casa?", "Like: quanto vali quando nessuno reagisce?", "Controllo: se puoi controllare tutto, sei più libero?", "IA: una macchina può capire chi sei?"],
   },
 };

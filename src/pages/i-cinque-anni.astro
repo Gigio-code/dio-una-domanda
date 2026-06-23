@@ -10,20 +10,45 @@ import { years } from "../data/site";
 >
   <PageHero
     eyebrow="I cinque anni"
-    title="Un percorso che accompagna la crescita"
-    intro="Ogni anno apre una domanda più grande: origine, corpo, libertà, coscienza, limite e futuro."
+    title="Cinque soglie, non un programma da subire"
+    intro="Ogni anno apre una domanda diversa: origine, gesti, libertà, coscienza, limite e futuro. Non tutto va detto subito: il percorso deve lasciare curiosità."
   />
-  <section class="section shell year-stack">
+  <section class="section shell year-stack year-timeline">
     {years.map((year) => (
-      <article class="year-card">
-        <div>
+      <article class="year-card year-card--rich">
+        <div class="year-main">
           <p class="year-number">{year.year}</p>
           <h2>{year.title}</h2>
-          <p>{year.question}</p>
+          <p class="lead-small">{year.question}</p>
+          <div class="year-focus">
+            <p class="eyebrow">Domanda per te</p>
+            <h3>{year.forYou}</h3>
+          </div>
+          <div class="year-focus">
+            <p class="eyebrow">In classe</p>
+            <p>{year.inClass}</p>
+          </div>
         </div>
-        <ul>
-          {year.themes.map((theme) => <li>{theme}</li>)}
-        </ul>
+        <div class="year-lists">
+          <div>
+            <p class="eyebrow">Temi</p>
+            <ul>
+              {year.themes.map((theme) => <li>{theme}</li>)}
+            </ul>
+          </div>
+          <div>
+            <p class="eyebrow">Materiali forti</p>
+            <ul>
+              {year.materials.map((material) => <li>{material}</li>)}
+            </ul>
+          </div>
+          <div>
+            <p class="eyebrow">Archivio espandibile</p>
+            <ul>
+              {year.expandable.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        </div>
       </article>
     ))}
   </section>

@@ -6,42 +6,67 @@ const {
   symbol,
   crosses = [],
   activities = [],
+  cards = [],
+  archive = [],
 } = Astro.props;
 ---
 
-<div class="study-grid study-grid--student">
-  <article class="study-card study-card--large">
-    <p class="eyebrow">Domanda grande</p>
-    <h2>{guide}</h2>
-  </article>
-  {forYou && (
+<div class="study-flow">
+  <div class="study-grid study-grid--student">
+    <article class="study-card study-card--large">
+      <p class="eyebrow">Domanda grande</p>
+      <h2>{guide}</h2>
+    </article>
+    {forYou && (
+      <article class="study-card">
+        <p class="eyebrow">Domanda per te</p>
+        <h3>{forYou}</h3>
+      </article>
+    )}
+    {inClass && (
+      <article class="study-card">
+        <p class="eyebrow">In classe succede questo</p>
+        <p>{inClass}</p>
+      </article>
+    )}
+    {symbol && (
+      <article class="study-card symbol-card">
+        <p class="eyebrow">Simbolo</p>
+        <h3>{symbol}</h3>
+      </article>
+    )}
     <article class="study-card">
-      <p class="eyebrow">Domanda per te</p>
-      <h3>{forYou}</h3>
+      <p class="eyebrow">Cosa attraversiamo</p>
+      <ul>
+        {crosses.map((item: string) => <li>{item}</li>)}
+      </ul>
     </article>
-  )}
-  {inClass && (
     <article class="study-card">
-      <p class="eyebrow">In classe succede questo</p>
-      <p>{inClass}</p>
+      <p class="eyebrow">Attività reali</p>
+      <ul>
+        {activities.map((item: string) => <li>{item}</li>)}
+      </ul>
     </article>
+  </div>
+
+  {cards.length > 0 && (
+    <div class="archive-cards">
+      {cards.map((card: { title: string; body: string; question?: string }) => (
+        <article class="archive-card">
+          <h3>{card.title}</h3>
+          <p>{card.body}</p>
+          {card.question && <p class="archive-card__question">{card.question}</p>}
+        </article>
+      ))}
+    </div>
   )}
-  {symbol && (
-    <article class="study-card symbol-card">
-      <p class="eyebrow">Simbolo</p>
-      <h3>{symbol}</h3>
-    </article>
+
+  {archive.length > 0 && (
+    <details class="archive-details">
+      <summary>Apri archivio</summary>
+      <ul>
+        {archive.map((item: string) => <li>{item}</li>)}
+      </ul>
+    </details>
   )}
-  <article class="study-card">
-    <p class="eyebrow">Cosa attraversiamo</p>
-    <ul>
-      {crosses.map((item: string) => <li>{item}</li>)}
-    </ul>
-  </article>
-  <article class="study-card">
-    <p class="eyebrow">Attività reali</p>
-    <ul>
-      {activities.map((item: string) => <li>{item}</li>)}
-    </ul>
-  </article>
 </div>

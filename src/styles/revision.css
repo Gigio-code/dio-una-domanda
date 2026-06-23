@@ -1,206 +1,45 @@
-.manifesto-lines {
-  display: grid;
-  gap: 8px;
-  margin-top: 22px;
-  max-width: 720px;
-}
-
-.manifesto-lines p {
-  color: var(--cream);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 800;
-}
-
-.feature-strip {
-  display: grid;
-  gap: 18px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.feature-strip h2 {
-  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
-}
-
-.student-voice-grid,
-.preview-grid {
-  display: grid;
-  gap: 12px;
-}
-
-.student-voice {
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(246, 237, 219, 0.045);
-  color: var(--cream);
-  padding: 18px;
-  font-size: 1.08rem;
-  font-weight: 750;
-}
-
-.study-grid--student {
-  align-items: stretch;
-}
-
-.study-card {
-  display: grid;
-  align-content: start;
-  gap: 10px;
-}
-
-.study-card h3 {
-  color: var(--cream);
-  font-size: clamp(1.25rem, 2.8vw, 2rem);
-}
-
-.symbol-card {
-  background:
-    linear-gradient(135deg, rgba(232, 95, 77, 0.12), rgba(246, 237, 219, 0.035));
-}
-
-.question-list--voice article,
-.list-grid--materials article {
-  min-height: 96px;
-  display: grid;
-  align-content: center;
-  color: var(--cream);
-  font-weight: 750;
-}
-
-.question-deck {
-  grid-template-columns: 1fr;
-}
-
-.question-choices {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.choice-button {
-  min-height: 42px;
-  border: 1px solid var(--line);
-  background: rgba(246, 237, 219, 0.04);
-  color: var(--cream);
-}
-
-.choice-button.active,
-.choice-button:hover {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--button-text);
-}
-
-.question-result {
-  border-left: 3px solid var(--accent);
-  padding-left: 16px;
-}
-
-.question-result h3 {
-  margin-top: 8px;
-  font-size: clamp(1.35rem, 3vw, 2.3rem);
-}
-
-.year-card--rich {
-  position: relative;
-  grid-template-columns: 1fr;
-}
-
-.year-card--rich::before {
-  content: "";
-  position: absolute;
-  left: 22px;
-  top: 22px;
-  bottom: 22px;
-  width: 2px;
-  background: linear-gradient(var(--accent), transparent);
-  opacity: 0.45;
-}
-
-.year-main,
-.year-lists {
-  position: relative;
-  z-index: 1;
-}
-
-.year-main {
-  display: grid;
-  gap: 14px;
-  padding-left: 18px;
-}
-
-.lead-small {
-  color: var(--cream);
-  font-size: 1.08rem;
-}
-
-.year-focus {
-  display: grid;
-  gap: 6px;
-}
-
-.year-focus h3 {
-  color: var(--cream);
-  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
-}
-
-.year-lists {
-  display: grid;
-  gap: 16px;
-}
-
-.year-lists > div {
-  display: grid;
-  gap: 10px;
-}
-
-.security-note {
-  border-left: 3px solid var(--accent);
-  padding-left: 14px;
-  color: var(--cream);
-  font-weight: 750;
-}
-
+.manifesto-lines { display: grid; gap: 8px; margin-top: 22px; max-width: 720px; }
+.manifesto-lines p { color: var(--cream); font-size: clamp(1rem, 2vw, 1.2rem); font-weight: 800; }
+.feature-strip { display: grid; gap: 18px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.student-voice-grid, .preview-grid { display: grid; gap: 12px; }
+.student-voice { margin: 0; border: 1px solid var(--line); border-radius: 8px; background: rgba(246, 237, 219, 0.045); color: var(--cream); padding: 18px; font-size: 1.08rem; font-weight: 750; }
+.study-card { display: grid; align-content: start; gap: 10px; }
+.study-card h3 { color: var(--cream); font-size: clamp(1.25rem, 2.8vw, 2rem); }
+.symbol-card { background: linear-gradient(135deg, rgba(232, 95, 77, 0.12), rgba(246, 237, 219, 0.035)); }
+.study-flow { display: grid; gap: 18px; }
+.archive-cards { display: grid; gap: 12px; }
+.archive-card { border: 1px solid var(--line); border-radius: 8px; background: rgba(246, 237, 219, 0.04); padding: 18px; display: grid; gap: 10px; }
+.archive-card h3 { color: var(--cream); font-size: clamp(1.1rem, 2vw, 1.45rem); }
+.archive-card p { margin: 0; }
+.archive-card__question { color: var(--cream); font-weight: 800; }
+.archive-details { border: 1px solid var(--line); border-radius: 8px; background: rgba(246, 237, 219, 0.035); padding: 0; }
+.archive-details summary { cursor: pointer; color: var(--cream); font-weight: 850; padding: 16px 18px; }
+.archive-details ul { margin: 0; padding: 0 18px 18px 36px; }
+.archive-details li + li { margin-top: 6px; }
+.archive-details--year { align-self: start; }
+.question-list--voice article, .list-grid--materials article { min-height: 96px; display: grid; align-content: center; color: var(--cream); font-weight: 750; }
+.question-deck { grid-template-columns: 1fr; }
+.question-choices { display: flex; flex-wrap: wrap; gap: 10px; }
+.choice-button { min-height: 42px; border: 1px solid var(--line); background: rgba(246, 237, 219, 0.04); color: var(--cream); }
+.choice-button.active, .choice-button:hover { border-color: var(--accent); background: var(--accent); color: var(--button-text); }
+.question-result { border-left: 3px solid var(--accent); padding-left: 16px; }
+.question-result h3 { margin-top: 8px; font-size: clamp(1.35rem, 3vw, 2.3rem); }
+.year-card--rich { position: relative; grid-template-columns: 1fr; }
+.year-card--rich::before { content: ""; position: absolute; left: 22px; top: 22px; bottom: 22px; width: 2px; background: linear-gradient(var(--accent), transparent); opacity: 0.45; }
+.year-main, .year-lists { position: relative; z-index: 1; }
+.year-main { display: grid; gap: 14px; padding-left: 18px; }
+.lead-small { color: var(--cream); font-size: 1.08rem; }
+.year-focus { display: grid; gap: 6px; }
+.year-focus h3 { color: var(--cream); font-size: clamp(1.2rem, 2.4vw, 1.7rem); }
+.year-lists { display: grid; gap: 16px; }
+.security-note { border-left: 3px solid var(--accent); padding-left: 14px; color: var(--cream); font-weight: 750; }
 @media (min-width: 720px) {
-  .feature-strip,
-  .year-card--rich {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    align-items: start;
-  }
-
-  .student-voice-grid,
-  .preview-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .study-card--large {
-    grid-column: span 2;
-  }
+  .feature-strip, .year-card--rich { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: start; }
+  .student-voice-grid, .preview-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .archive-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .study-card--large { grid-column: span 2; }
 }
-
 @media (max-width: 560px) {
-  .manifesto-lines {
-    margin-top: 18px;
-  }
-
-  .hero-actions,
-  .panel-actions,
-  .question-choices {
-    display: grid;
-  }
-
-  .button,
-  button,
-  .text-link {
-    width: 100%;
-  }
-
-  .year-card--rich::before {
-    left: 16px;
-  }
-
-  .year-main {
-    padding-left: 14px;
-  }
+  .hero-actions, .panel-actions, .question-choices { display: grid; }
+  .button, button, .text-link { width: 100%; }
 }

@@ -10,8 +10,15 @@ const page = publicPages.nuoviSacri;
 <BaseLayout title={page.eyebrow} description={page.intro}>
   <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
   <section class="section shell">
-    <StudyBlocks guide={page.guide} crosses={page.crosses} activities={page.activities} />
-    <div class="question-list">
+    <StudyBlocks
+      guide={page.guide}
+      forYou={page.forYou}
+      inClass={page.inClass}
+      symbol={page.symbol}
+      crosses={page.crosses}
+      activities={page.activities}
+    />
+    <div class="question-list question-list--voice">
       {page.questions.map((question) => <article>{question}</article>)}
     </div>
   </section>

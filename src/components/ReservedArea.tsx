@@ -4,26 +4,41 @@ import { Lock, ShieldCheck } from "lucide-react";
 
 const ACCESS_CODE = "domanda";
 
+const previewMaterials = [
+  {
+    title: "Schede classe",
+    body: "Piste brevi per aprire una discussione, leggere un testo, osservare un'immagine.",
+  },
+  {
+    title: "Attività in 20 minuti",
+    body: "Domande a bruciapelo, piccoli casi, scelte da difendere senza risposte preconfezionate.",
+  },
+  {
+    title: "Immagini-stimolo",
+    body: "Simboli, scene, parole e materiali visivi per far partire il confronto.",
+  },
+];
+
 const materials = [
   {
     title: "1ª - Mito, sacro, origine",
-    body: "Tracce per aprire il percorso: mito, simbolo, sacro, racconti di origine.",
+    body: "Dio in una parola, miti di creazione, sacro/profano, immagini di Dio, laboratorio crea una religione.",
   },
   {
     title: "2ª - Riti, corpo, identità",
-    body: "Schede per osservare pratiche religiose, feste, gesti, luoghi e appartenenza.",
+    body: "Preghiera, cibo, feste, appartenenza, telefono sacro/profano, creare un rito.",
   },
   {
-    title: "3ª - Libertà religiosa",
-    body: "Domande per discutere scelta, pluralismo, dialogo e coscienza.",
+    title: "3ª - Libertà, coscienza, conflitto",
+    body: "Fratture religiose, libertà religiosa, identità, legge sacra, scelta personale.",
   },
   {
-    title: "4ª - Legge, potere, interpretazione",
-    body: "Materiali per ragionare su autorità, bene, norma e responsabilità.",
+    title: "4ª - Legge, potere, responsabilità",
+    body: "Kohlberg, tentazione, bene e male, obbedire o interpretare, casi morali.",
   },
   {
     title: "5ª - Limite, crisi, futuro",
-    body: "Percorsi su morte, tecnologia, IA, crisi del sacro e futuro dell'umano.",
+    body: "Morte, destino, Stato-Chiesa, bioetica, IA, dati, corpo, potere.",
   },
 ];
 
@@ -46,7 +61,7 @@ export default function ReservedArea() {
       setError("");
       return;
     }
-    setError("Codice non corretto. Questa prima versione usa una password semplice.");
+    setError("Codice non corretto. Questa prima versione usa una protezione leggera.");
   }
 
   if (unlocked) {
@@ -55,9 +70,9 @@ export default function ReservedArea() {
         <div className="reserved-heading">
           <ShieldCheck size={28} aria-hidden="true" />
           <div>
-            <p className="eyebrow">Accesso classi</p>
+            <p className="eyebrow">Materiali per la classe</p>
             <h2 ref={unlockedHeadingRef} tabIndex={-1}>
-              Materiali didattici non sensibili
+              Percorsi didattici non sensibili
             </h2>
           </div>
         </div>
@@ -75,18 +90,28 @@ export default function ReservedArea() {
   }
 
   return (
-    <section className="reserved" aria-label="Area riservata">
+    <section className="reserved" aria-label="Materiali per la classe">
       <div className="reserved-heading">
         <Lock size={28} aria-hidden="true" />
         <div>
-          <p className="eyebrow">Area riservata</p>
-          <h2>Accesso leggero per materiali di classe</h2>
+          <p className="eyebrow">Materiali per la classe</p>
+          <h2>Prima guarda cosa c'è dentro</h2>
         </div>
       </div>
       <p>
-        Questa sezione non raccoglie dati personali, voti, foto di minori o
-        elaborati identificabili. Per iniziare contiene solo materiali
-        didattici e percorsi.
+        Dentro trovi schede, immagini guida, attività brevi e materiali per aprire la discussione. Non ci sono voti, foto, dati personali o elaborati identificabili.
+      </p>
+      <div className="preview-grid" aria-label="Anteprima materiali">
+        {previewMaterials.map((item) => (
+          <article className="card" key={item.title}>
+            <p className="eyebrow">Anteprima</p>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </article>
+        ))}
+      </div>
+      <p className="security-note">
+        Nota tecnica: questo codice classe è una protezione leggera, adatta solo a materiali didattici non sensibili.
       </p>
       <form onSubmit={submit} className="access-form">
         <label htmlFor="access-code">Codice classe</label>
@@ -101,7 +126,7 @@ export default function ReservedArea() {
             aria-invalid={Boolean(error)}
             aria-describedby={error ? "access-code-error" : undefined}
           />
-          <button type="submit">Entra</button>
+          <button type="submit">Entra nei materiali</button>
         </div>
         {error && (
           <p className="form-error" id="access-code-error" role="alert">

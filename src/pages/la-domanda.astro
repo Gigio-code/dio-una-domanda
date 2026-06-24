@@ -271,7 +271,7 @@ const immaginiAldila = [
   }
 
   .section-band {
-    background: #1e1a17;
+    background: var(--bg-soft);
     max-width: none;
     padding-left: 0;
     padding-right: 0;
@@ -284,7 +284,7 @@ const immaginiAldila = [
   }
 
   .section-kicker {
-    color: #c4a882;
+    color: var(--accent);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -295,8 +295,8 @@ const immaginiAldila = [
   h1,
   h2,
   h3 {
-    color: #f1e6d2;
-    font-family: Georgia, serif;
+    color: var(--cream);
+    font-family: var(--font-display);
     font-weight: 500;
     letter-spacing: 0;
   }
@@ -320,14 +320,14 @@ const immaginiAldila = [
 
   .hero-copy,
   .body-copy {
-    color: #d8d0c5;
+    color: var(--muted);
     font-size: 1rem;
     line-height: 1.75;
     margin: 0 0 1.5rem;
   }
 
   .hero-copy {
-    color: #b9aea3;
+    color: var(--muted);
     font-size: 1.1rem;
   }
 
@@ -339,22 +339,22 @@ const immaginiAldila = [
   }
 
   .word-chip {
-    border: 1px solid #393229;
+    border: 1px solid var(--line);
     border-radius: 6px;
-    color: #f1e6d2;
-    font-family: Georgia, serif;
+    color: var(--cream);
+    font-family: var(--font-body);
     font-size: 0.95rem;
     letter-spacing: 0.04em;
     padding: 0.45rem 0.75rem;
   }
 
   .word-chip:hover {
-    border-color: #c4a882;
-    color: #c4a882;
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   .source-note {
-    color: #9e948a;
+    color: var(--muted);
     font-size: 0.82rem;
     font-style: italic;
     line-height: 1.5;
@@ -362,16 +362,16 @@ const immaginiAldila = [
   }
 
   .student-note {
-    background: rgba(196, 168, 130, 0.07);
-    border-left: 2px solid #c4a882;
+    background: rgba(246, 237, 219, 0.035);
+    border-left: 2px solid var(--accent);
     border-radius: 0 6px 6px 0;
     margin: 2rem 0;
     padding: 1rem 1.35rem;
   }
 
   .student-note p {
-    color: #d8d0c5;
-    font-family: Georgia, serif;
+    color: var(--muted);
+    font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.7;
     margin: 0;
@@ -379,14 +379,14 @@ const immaginiAldila = [
 
   .large-note {
     border-left: 0;
-    border-top: 1px solid #393229;
-    border-bottom: 1px solid #393229;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
     border-radius: 0;
     text-align: center;
   }
 
   .visitor-question {
-    border: 1px solid #c4a882;
+    border: 1px solid var(--accent);
     border-radius: 6px;
     margin-top: 2.25rem;
     padding: 1.25rem;
@@ -394,15 +394,15 @@ const immaginiAldila = [
   }
 
   .visitor-question p {
-    color: #f1e6d2;
-    font-family: Georgia, serif;
+    color: var(--cream);
+    font-family: var(--font-display);
     font-size: 1.15rem;
     line-height: 1.45;
     margin: 0;
   }
 
   .visitor-question span {
-    color: #9e948a;
+    color: var(--muted);
     display: block;
     font-size: 0.9rem;
     margin-top: 0.45rem;
@@ -415,15 +415,15 @@ const immaginiAldila = [
   }
 
   .accordion-item {
-    border: 1px solid #393229;
+    border: 1px solid var(--line);
     border-radius: 6px;
     overflow: hidden;
   }
 
   .accordion-item summary {
-    color: #f1e6d2;
+    color: var(--cream);
     cursor: pointer;
-    font-family: Georgia, serif;
+    font-family: var(--font-body);
     list-style: none;
     padding: 1rem 1.15rem;
   }
@@ -433,7 +433,7 @@ const immaginiAldila = [
   }
 
   .accordion-item summary::after {
-    color: #c4a882;
+    color: var(--accent);
     content: "+";
     float: right;
   }
@@ -443,7 +443,7 @@ const immaginiAldila = [
   }
 
   .accordion-item ul {
-    border-top: 1px solid #393229;
+    border-top: 1px solid var(--line);
     display: grid;
     gap: 0.75rem;
     list-style: none;
@@ -452,7 +452,7 @@ const immaginiAldila = [
   }
 
   .accordion-item li {
-    color: #b9aea3;
+    color: var(--muted);
     font-size: 0.94rem;
     line-height: 1.65;
   }
@@ -470,21 +470,21 @@ const immaginiAldila = [
 
   .god-card,
   .afterlife-item {
-    border: 1px solid #393229;
+    border: 1px solid var(--line);
     border-radius: 6px;
     padding: 1.15rem;
   }
 
   .god-card p,
   .afterlife-item p {
-    color: #b9aea3;
+    color: var(--muted);
     font-size: 0.94rem;
     line-height: 1.65;
     margin: 0;
   }
 
   .god-card strong {
-    color: #c4a882;
+    color: var(--accent);
     display: block;
     font-size: 0.9rem;
     font-style: italic;
@@ -509,15 +509,15 @@ const immaginiAldila = [
   }
 
   .guide-questions p {
-    color: #b9aea3;
-    font-family: Georgia, serif;
+    color: var(--muted);
+    font-family: var(--font-body);
     font-size: 1.08rem;
     line-height: 1.55;
     margin: 0;
   }
 
   .submit-section {
-    border-top: 1px solid #393229;
+    border-top: 1px solid var(--line);
   }
 
   .disabled-form {
@@ -528,17 +528,17 @@ const immaginiAldila = [
 
   .disabled-form label,
   .disabled-form p {
-    color: #9e948a;
+    color: var(--muted);
     font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;
   }
 
   .disabled-form textarea {
-    background: #1e1a17;
-    border: 1px solid #393229;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
     border-radius: 6px;
-    color: #d8d0c5;
+    color: var(--cream);
     font: inherit;
     padding: 0.85rem;
     resize: vertical;
@@ -546,9 +546,9 @@ const immaginiAldila = [
 
   .disabled-form button {
     background: transparent;
-    border: 1px solid #393229;
+    border: 1px solid var(--line);
     border-radius: 6px;
-    color: #9e948a;
+    color: var(--muted);
     justify-self: start;
     padding: 0.65rem 1rem;
   }

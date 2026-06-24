@@ -116,7 +116,7 @@ input {
 .logo-image {
   display: block;
   width: min(440px, 78vw);
-  aspect-ratio: 1280 / 360;
+  aspect-ratio: 1280 / 440;
   background: url("/brand/logo-dio-una-domanda.svg") center / contain no-repeat;
 }
 
@@ -262,7 +262,7 @@ p {
 }
 
 .hero-actions,
-.panel-actions {
+panel-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -342,7 +342,7 @@ input:focus-visible,
 .method-grid,
 .list-grid,
 .question-list,
-.study-grid {
+study-grid {
   display: grid;
   gap: 14px;
 }

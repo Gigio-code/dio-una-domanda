@@ -1,0 +1,29 @@
+.logo-image {
+  aspect-ratio: 1280 / 440;
+}
+
+.hero-actions,
+.panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.path-grid,
+.card-grid,
+.method-grid,
+.list-grid,
+.question-list,
+.study-grid {
+  display: grid;
+  gap: 14px;
+}
+
+@media (max-width: 560px) {
+  .hero-actions,
+  .panel-actions,
+  .question-choices {
+    display: grid;
+  }
+}

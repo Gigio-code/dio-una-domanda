@@ -25,10 +25,10 @@ export const paths = [
 ];
 
 export const methods = [
-  { title: "Guardiamo", body: "Film, immagini, scene quotidiane." },
+  { title: "Ci lasciamo spiazzare", body: "Film, immagini, scene che di solito si lasciano scorrere via." },
   { title: "Mettiamo in crisi", body: "Una frase, un caso, una scelta difficile." },
-  { title: "Discutiamo", body: "Domande vere, anche scomode." },
-  { title: "Prendiamo posizione", body: "Non per avere ragione: per capire meglio." },
+  { title: "Diciamo la nostra", body: "Domande vere, anche quando fanno stare un po' scomodi." },
+  { title: "Portiamo via una domanda", body: "Non una risposta certa: qualcosa che è davvero tuo." },
 ];
 
 export const studentVoices = [
@@ -161,7 +161,7 @@ export const publicPages = {
     inClass: "Partiamo da un dilemma, una frase, un autore o una scena. Poi proviamo a difendere una posizione senza fingere che sia facile.",
     symbol: "Due frasi una davanti all'altra: credo / dubito.",
     crosses: ["Dio e il male", "coscienza, legge, libertà e responsabilità", "fede, dubbio, nichilismo e immagini di Dio"],
-    activities: ["duello di frasi: credo / dubito, obbedisco / interpreto", "lettura breve di un autore con una domanda personale", "scrittura di una posizione motivata su un caso morale"],
+    activities: ["duello di frasi: credo / dubito, obbedisco / interpreto", "lettura breve di un autore con una domanda personala", "scrittura di una posizione motivata su un caso morale"],
     cards: [
       { title: "Dio, liberami da Dio", body: "A volte non rifiutiamo Dio. Rifiutiamo un'immagine di Dio: giudice sempre arrabbiato, tappabuchi, controllore, magia, punizione.", question: "Quale immagine di Dio andrebbe lasciata crescere, o lasciata andare?" },
       { title: "Nietzsche: Dio è morto?", body: "Non solo uno slogan. Se crollano le basi comuni, chi decide che cosa vale? Chi tiene in piedi il bene, il male, il senso?", question: "Se togli Dio, che cosa metti al centro?" },

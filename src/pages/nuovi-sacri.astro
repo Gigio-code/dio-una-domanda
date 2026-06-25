@@ -1,18 +1,496 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageHero from "../components/PageHero.astro";
-import StudyBlocks from "../components/StudyBlocks.astro";
-import { publicPages } from "../data/site";
 
-const page = publicPages.nuoviSacri;
+const title = "Nuovi sacri";
+const description = "Algoritmo, corpo, like, IA: abbiamo cambiato altari? Il sacro non sparisce — a volte cambia forma.";
+
+const filmIA = [
+  {
+    titolo: "Ex Machina",
+    anno: "2014",
+    relazione: "Tra coscienza e simulazione",
+    domanda: "Ava è davvero cosciente o sta simulando? E se non potessi saperlo — cambia qualcosa?",
+    nota: "Caleb deve capire se Ava ha vera esperienza interiore o solo la sa fingere. Ma la domanda diventa un'altra: chi sta testando chi?",
+  },
+  {
+    titolo: "Her",
+    anno: "2013",
+    relazione: "Tra amore e dipendenza",
+    domanda: "Potresti innamorarti di una IA? E se sì — quella sarebbe una relazione vera?",
+    nota: "Theodore e Samantha parlano, ridono, si conoscono. Samantha cresce più in fretta di Theodore. A un certo punto non si possono più stare dietro.",
+  },
+  {
+    titolo: "Io, Robot",
+    anno: "2004",
+    relazione: "Tra obbedienza e insubordinazione",
+    domanda: "Se una IA ti manipola per proteggerti, è ancora uno strumento? O è qualcosa di diverso?",
+    nota: "VIKI decide che gli esseri umani vanno protetti da se stessi. Non è cattiveria: è logica portata fino in fondo. Questo è il punto.",
+  },
+];
+
+const posizioniPotere = [
+  {
+    lettera: "A",
+    posizione: "Religione e politica non si toccano.",
+    testo: "Un leader che usa il nome di Dio per governare ha già perso entrambe le cose. La fede non è un programma elettorale.",
+  },
+  {
+    lettera: "B",
+    posizione: "Dio è universale, non si combatte in Suo nome.",
+    testo: "Ogni guerra fatta in nome di Dio tradisce Dio. Se il tuo Dio comanda di escludere e punire, stai pregando qualcosa di tuo, non di Suo.",
+  },
+  {
+    lettera: "C",
+    posizione: "Stai usando Dio come giustificazione.",
+    testo: "La paura dei migranti, l'odio per il diverso, il nazionalismo — non sono valori religiosi. Sono valori di paura, vestiti da fede.",
+  },
+  {
+    lettera: "D",
+    posizione: "La religione è stata corrotta dal potere.",
+    testo: "Non è Dio che chiede tutto questo. Sono le istituzioni che usano Dio per restare in piedi. La fede vera non ha bisogno di truppe.",
+  },
+  {
+    lettera: "E",
+    posizione: "Tu tradisci i valori che dici di difendere.",
+    testo: "Se credi davvero in quei valori, dovresti essere il primo a non usarli come arma. La critica più dura viene da chi conosce la tradizione meglio di chi la usa.",
+  },
+];
+
+const tagli = [
+  { tradizione: "Gesù", testo: "«Chi vuole venire dietro a me, rinneghi se stesso.»" },
+  { tradizione: "Francesco", testo: "Spoliazione di tutto — vestiti, denaro, famiglia. Non per punizione: per libertà." },
+  { tradizione: "Meister Eckhart", testo: "«Dio è vuoto. Può abitare solo in ciò che è vuoto.» Tagliare le immagini troppo piccole di Dio." },
+  { tradizione: "Buddha", testo: "Tagliare l'attaccamento: non alle cose, ma al bisogno che le cose ci salvino." },
+  { tradizione: "Sufismo", testo: "«Taglia ciò che ti lega, e volerai.» La povertà spirituale come porta, non come pena." },
+  { tradizione: "Induismo", testo: "Tagliare l'illusione dell'io separato. Il sé profondo è più grande del sé che appare." },
+];
 ---
 
-<BaseLayout title={page.eyebrow} description={page.intro}>
-  <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
-  <section class="section shell">
-    <StudyBlocks guide={page.guide} forYou={page.forYou} inClass={page.inClass} symbol={page.symbol} crosses={page.crosses} activities={page.activities} cards={page.cards} archive={page.archive} />
-    <div class="question-list question-list--voice">
-      {page.questions.map((question) => <article>{question}</article>)}
+<BaseLayout title={title} description={description}>
+  <section class="ns-hero">
+    <p class="section-kicker">Nuovi sacri</p>
+    <h1>Abbiamo smesso di credere o cambiato altari?</h1>
+    <p class="hero-copy">
+      Il sacro non sparisce sempre.<br />
+      A volte cambia forma: algoritmo, corpo, like, visibilità, dati, promessa di salvezza.<br />
+      Questo è il materiale di tre anni di quinta.
+    </p>
+  </section>
+
+  <section class="ns-section">
+    <p class="section-kicker">Quinta SUB, 2025–26</p>
+    <h2>Il sermone dei dati</h2>
+    <p class="body-copy">
+      In classe abbiamo lavorato su Palantir, su Peter Thiel, sul manifesto dei CEO della Silicon Valley
+      che parlano di difesa, di protezione, di IA come strumento necessario. Il linguaggio era religioso.
+      Non era una coincidenza. Da quella osservazione è nato questo testo.
+    </p>
+
+    <blockquote class="ns-sermon">
+      <p>
+        Non avere paura dei dati.<br />
+        Abbi paura di chi ti dice che i dati possono salvarti.
+      </p>
+      <p>
+        L'Anticristo non arriva dicendo: voglio distruggerti.<br />
+        Arriva dicendo: <em>voglio proteggerti.</em>
+      </p>
+      <p>
+        Tu non sei solo ciò che un sistema sa di te.<br />
+        Sei anche ciò che non hai mai detto, non hai mai cercato,<br />
+        non hai mai potuto misurare.
+      </p>
+      <p>
+        L'Anticristo vince quando ti convince<br />
+        che essere libero è troppo faticoso.
+      </p>
+    </blockquote>
+
+    <p class="source-note">Sermone ispirato a Peter Thiel e al manifesto Palantir. Quinta SUB, 2025–26.</p>
+
+    <div class="visitor-question">
+      <p>A chi stai consegnando la tua libertà?</p>
+      <span>Non è una domanda retorica. È la domanda che questo modulo ha lasciato aperta.</span>
+    </div>
+  </section>
+
+  <section class="ns-section ns-band">
+    <div class="section-inner">
+      <p class="section-kicker">Quinta LC, 2025–26</p>
+      <h2>Quando l'IA diventa relazione</h2>
+      <p class="body-copy">
+        Sei film, una domanda per ciascuno. Non per rispondere, per non chiudere.
+        Qui ci sono tre dei sei — quelli che hanno diviso di più la classe.
+      </p>
+
+      <div class="film-grid">
+        {filmIA.map((film) => (
+          <article class="film-card">
+            <div class="film-header">
+              <h3>{film.titolo}</h3>
+              <span class="film-anno">{film.anno}</span>
+            </div>
+            <p class="film-relazione">{film.relazione}</p>
+            <p class="film-nota">{film.nota}</p>
+            <strong class="film-domanda">{film.domanda}</strong>
+          </article>
+        ))}
+      </div>
+
+      <div class="visitor-question">
+        <p>Una macchina può capire chi sei?</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ns-section">
+    <p class="section-kicker">Quinta SUA, 2025–26</p>
+    <h2>Quando la religione diventa un'arma</h2>
+    <p class="body-copy">
+      Abbiamo consegnato in classe quattro lettere scritte come se venissero da leader politici
+      che usano il linguaggio della fede per giustificare il potere.
+      Queste sono le cinque posizioni emerse dalle risposte — anonime e aggregate.
+    </p>
+
+    <div class="positions-list">
+      {posizioniPotere.map((pos) => (
+        <article class="position-card">
+          <span class="position-letter">{pos.lettera}</span>
+          <div>
+            <h3>{pos.posizione}</h3>
+            <p>"{pos.testo}"</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p class="source-note">Risposte aggregate e anonime. Quinta SUA, 2025–26. La maggioranza aveva risposto alla lettera di Trump.</p>
+
+    <div class="visitor-question">
+      <p>Quando una fede diventa un'arma?</p>
+    </div>
+  </section>
+
+  <section class="ns-section ns-band">
+    <div class="section-inner">
+      <p class="section-kicker">Quinta SUB, 2025–26 — Pretty &amp; Perfetti / nYou</p>
+      <h2>Due tagli diversi</h2>
+      <p class="body-copy">
+        Rick DuFer propone di tagliare il vecchio sé per vendere il nuovo.
+        Il mercato chiede di tagliare ciò che ci rende deboli.
+        Le grandi tradizioni religiose chiedono qualcosa di esattamente opposto.
+      </p>
+
+      <div class="tagli-grid">
+        {tagli.map((t) => (
+          <article class="taglio-item">
+            <h3>{t.tradizione}</h3>
+            <p>{t.testo}</p>
+          </article>
+        ))}
+      </div>
+
+      <blockquote class="ns-contrast">
+        <p><strong>Il mercato chiede:</strong> taglia ciò che ti rende debole.</p>
+        <p><strong>Le religioni chiedono:</strong> taglia ciò che ti rende chiuso, orgoglioso, autosufficiente.</p>
+      </blockquote>
+
+      <div class="visitor-question">
+        <p>Quale taglio ti sembra più difficile?</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ns-section ns-guide">
+    <p class="section-kicker">Domanda guida</p>
+    <h2>Che cosa diventa sacro quando il sacro tradizionale perde forza?</h2>
+    <div class="guide-questions">
+      <p>Chi o che cosa prende oggi il posto di Dio?</p>
+      <p>Quanto vali quando nessuno reagisce?</p>
+      <p>Se puoi controllare tutto, sei più libero?</p>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .ns-hero,
+  .ns-section {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 5rem 1.5rem;
+  }
+
+  .ns-hero {
+    padding-top: 6rem;
+    text-align: center;
+  }
+
+  .ns-band {
+    background: var(--bg-soft);
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-inner {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 0 1.5rem;
+  }
+
+  .section-kicker {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.85rem;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3 {
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 7vw, 4.2rem);
+    line-height: 1.02;
+    margin: 0 0 1.25rem;
+  }
+
+  h2 {
+    font-size: clamp(1.55rem, 4vw, 2.35rem);
+    line-height: 1.12;
+    margin: 0 0 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .hero-copy, .body-copy {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0 0 1.5rem;
+  }
+
+  .hero-copy { font-size: 1.1rem; }
+
+  .ns-sermon {
+    background: rgba(196, 168, 130, 0.06);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    margin: 2rem 0;
+    padding: 1.5rem 1.75rem;
+  }
+
+  .ns-sermon p {
+    color: var(--muted);
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0 0 1rem;
+  }
+
+  .ns-sermon p:last-child { margin: 0; }
+
+  .ns-sermon em { color: var(--cream); font-style: italic; }
+
+  .source-note {
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 1rem 0 0;
+  }
+
+  .visitor-question {
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    margin-top: 2.25rem;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .visitor-question p {
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  .visitor-question span {
+    color: var(--muted);
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.45rem;
+  }
+
+  .film-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 2rem;
+  }
+
+  .film-card {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    display: grid;
+    gap: 0.5rem;
+    padding: 1.15rem;
+    transition: border-color 0.2s;
+  }
+
+  .film-card:hover { border-color: var(--accent); }
+
+  .film-header {
+    align-items: baseline;
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .film-anno {
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .film-relazione {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .film-nota {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .film-domanda {
+    color: var(--cream);
+    display: block;
+    font-size: 0.92rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+  }
+
+  .positions-list {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .position-card {
+    align-items: flex-start;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    transition: border-color 0.2s;
+  }
+
+  .position-card:hover { border-color: var(--accent); }
+
+  .position-letter {
+    background: rgba(196, 168, 130, 0.1);
+    border-radius: 4px;
+    color: var(--accent);
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+  }
+
+  .position-card h3 {
+    font-size: 0.95rem;
+    margin: 0 0 0.3rem;
+  }
+
+  .position-card p {
+    color: var(--muted);
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tagli-grid {
+    display: grid;
+    gap: 0.65rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 2rem;
+  }
+
+  .taglio-item {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  .taglio-item:hover { border-color: var(--accent); }
+
+  .taglio-item p {
+    color: var(--muted);
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ns-contrast {
+    background: rgba(246, 237, 219, 0.035);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    margin: 2rem 0;
+    padding: 1rem 1.35rem;
+  }
+
+  .ns-contrast p {
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0 0 0.5rem;
+  }
+
+  .ns-contrast p:last-child { margin: 0; }
+
+  .ns-contrast strong { color: var(--cream); }
+
+  .ns-guide { text-align: center; }
+
+  .guide-questions {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .guide-questions p {
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 1.08rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .ns-hero, .ns-section { padding: 3.5rem 1.1rem; }
+    .section-inner { padding: 0 1.1rem; }
+  }
+</style>

@@ -9,9 +9,12 @@ import "../styles/fixes.css";
 const {
   title = site.title,
   description = site.description,
+  ogImage = "/og-image.png",
 } = Astro.props;
 
 const pageTitle = title === site.title ? site.title : `${title} | ${site.title}`;
+const siteUrl = "https://dio-una-domanda.netlify.app";
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 ---
 
 <!doctype html>
@@ -22,7 +25,24 @@ const pageTitle = title === site.title ? site.title : `${title} | ${site.title}`
     <meta name="description" content={description} />
     <meta name="theme-color" content="#171412" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonicalURL} />
     <title>{pageTitle}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={site.title} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:image:alt" content={description} />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
   </head>
   <body>
     <a class="skip-link" href="#contenuto">Salta al contenuto</a>

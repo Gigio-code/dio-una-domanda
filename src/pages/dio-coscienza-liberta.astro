@@ -5,10 +5,12 @@ import StudyBlocks from "../components/StudyBlocks.astro";
 import { publicPages } from "../data/site";
 
 const page = publicPages.filosofia;
+const title = "Dio, coscienza e libertà";
+const description = "Credo, dubito, scelgo: dove nasce una coscienza? Un percorso tra filosofia, fede e libertà per capire che cosa significa scegliere davvero.";
 ---
 
-<BaseLayout title={page.eyebrow} description={page.intro}>
-  <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
+<BaseLayout title={title} description={description}>
+  <PageHero eyebrow={page.eyebrow} title={title} intro={description} />
   <section class="section shell">
     <StudyBlocks guide={page.guide} forYou={page.forYou} inClass={page.inClass} symbol={page.symbol} crosses={page.crosses} activities={page.activities} cards={page.cards} archive={page.archive} />
   </section>

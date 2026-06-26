@@ -10,7 +10,7 @@ export const navItems = [
   { href: "/la-domanda", label: "La domanda" },
   { href: "/mito-e-sacro", label: "Mito e sacro" },
   { href: "/religioni", label: "Religioni" },
-  { href: "/filosofia", label: "Filosofia" },
+  { href: "/dio-coscienza-liberta", label: "Dio, coscienza e libertà" },
   { href: "/nuovi-sacri", label: "Nuovi sacri" },
   { href: "/i-cinque-anni", label: "I cinque anni" },
   { href: "/area-riservata", label: "Materiali" },

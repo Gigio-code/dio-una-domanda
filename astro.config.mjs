@@ -3,6 +3,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://dio-una-domanda.netlify.app",
+  site: "https://gigio-code.github.io",
+  base: "/dio-una-domanda",
   integrations: [react(), sitemap()],
 });

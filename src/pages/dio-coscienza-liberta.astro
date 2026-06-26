@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import StudyBlocks from "../components/StudyBlocks.astro";
+import SubpageNav from "../components/SubpageNav.astro";
 import { publicPages } from "../data/site";
 
 const page = publicPages.filosofia;
@@ -14,4 +15,12 @@ const description = "Credo, dubito, scelgo: dove nasce una coscienza? Un percors
   <section class="section shell">
     <StudyBlocks guide={page.guide} forYou={page.forYou} inClass={page.inClass} symbol={page.symbol} crosses={page.crosses} activities={page.activities} cards={page.cards} archive={page.archive} />
   </section>
+  <SubpageNav pages={[
+    { href: "/dio-coscienza-liberta/legge-sacra/", title: "Legge sacra", kicker: "Esplorazione" },
+    { href: "/dio-coscienza-liberta/coscienza/", title: "Coscienza", kicker: "Esperienza" },
+    { href: "/dio-coscienza-liberta/legge-sacra-potere/", title: "Legge sacra e potere", kicker: "Dilemma" },
+    { href: "/dio-coscienza-liberta/sviluppo-morale/", title: "Sviluppo morale", kicker: "Laboratorio" },
+    { href: "/dio-coscienza-liberta/gesu-legge-sacra/", title: "Gesù e la legge sacra", kicker: "Narrativa" },
+    { href: "/dio-coscienza-liberta/male-tentazione-perdono/", title: "Male, tentazione, perdono", kicker: "Gioco" },
+  ]} />
 </BaseLayout>

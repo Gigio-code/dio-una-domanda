@@ -1,0 +1,14 @@
+---
+const { pages } = Astro.props;
+---
+
+<section class="section shell">
+  <div class="path-grid">
+    {pages.map((p: { href: string; title: string; kicker?: string }) => (
+      <a class="path-card" href={p.href}>
+        {p.kicker && <p class="eyebrow">{p.kicker}</p>}
+        <h3>{p.title}</h3>
+      </a>
+    ))}
+  </div>
+</section>

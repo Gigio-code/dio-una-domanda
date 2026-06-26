@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
+import SubpageNav from "../components/SubpageNav.astro";
 ---
 
 <BaseLayout
@@ -21,4 +22,7 @@ import PageHero from "../components/PageHero.astro";
       Sono luoghi in cui si decide lentamente che persona stai diventando.
     </p>
   </section>
+  <SubpageNav pages={[
+    { href: "/la-domanda-resta-aperta/che-cosa-sto-diventando/", title: "Che cosa sto diventando?", kicker: "Traccia finale" },
+  ]} />
 </BaseLayout>

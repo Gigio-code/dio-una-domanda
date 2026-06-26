@@ -4,6 +4,7 @@
 // Nota: le tracce degli studenti sono presentate in forma anonima, aggregata e parafrasata.
 
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SubpageNav from "../components/SubpageNav.astro";
 
 const title = "La domanda";
 const description =
@@ -255,6 +256,12 @@ const immaginiAldila = [
       <button type="button" disabled>Invio non ancora attivo</button>
     </div>
   </section>
+
+  <SubpageNav pages={[
+    { href: "/la-domanda/dio-in-una-parola/", title: "Dio in una parola", kicker: "Esperienza" },
+    { href: "/la-domanda/immagini-di-dio/", title: "Immagini di Dio", kicker: "Galleria" },
+    { href: "/la-domanda/credere-non-credere-cercare/", title: "Credere, non credere, cercare", kicker: "Dialogo" },
+  ]} />
 </BaseLayout>
 
 <style>

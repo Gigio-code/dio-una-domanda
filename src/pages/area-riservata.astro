@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
+import SubpageNav from "../components/SubpageNav.astro";
 import ReservedArea from "../components/ReservedArea";
 ---
 
@@ -16,4 +17,11 @@ import ReservedArea from "../components/ReservedArea";
   <section class="section shell">
     <ReservedArea client:load />
   </section>
+  <SubpageNav pages={[
+    { href: "/area-riservata/prima/", title: "Materiali prima", kicker: "Anno 1" },
+    { href: "/area-riservata/seconda/", title: "Materiali seconda", kicker: "Anno 2" },
+    { href: "/area-riservata/terza/", title: "Materiali terza", kicker: "Anno 3" },
+    { href: "/area-riservata/quarta/", title: "Materiali quarta", kicker: "Anno 4" },
+    { href: "/area-riservata/quinta/", title: "Materiali quinta", kicker: "Anno 5" },
+  ]} />
 </BaseLayout>

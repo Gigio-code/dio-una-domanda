@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
+import SubpageNav from "../components/SubpageNav.astro";
 import { years } from "../data/site";
 ---
 
@@ -34,4 +35,11 @@ import { years } from "../data/site";
       </article>
     ))}
   </section>
+  <SubpageNav pages={[
+    { href: "/i-cinque-anni/prima-origine/", title: "Prima: origine", kicker: "Anno 1" },
+    { href: "/i-cinque-anni/seconda-riti-corpo/", title: "Seconda: riti e corpo", kicker: "Anno 2" },
+    { href: "/i-cinque-anni/terza-liberta-scelta/", title: "Terza: libertà e scelta", kicker: "Anno 3" },
+    { href: "/i-cinque-anni/quarta-legge-frontiera/", title: "Quarta: legge e frontiera", kicker: "Anno 4" },
+    { href: "/i-cinque-anni/quinta-limite-futuro/", title: "Quinta: limite e futuro", kicker: "Anno 5" },
+  ]} />
 </BaseLayout>

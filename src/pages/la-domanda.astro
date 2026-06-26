@@ -1,0 +1,577 @@
+---
+// Pagina: La domanda
+// Contenuti rielaborati da materiali dell'Archivio IRC.
+// Nota: le tracce degli studenti sono presentate in forma anonima, aggregata e parafrasata.
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SubpageNav from "../components/SubpageNav.astro";
+
+const title = "La domanda";
+const description =
+  "Dio come parola, immagine, desiderio, paura. Non una risposta pronta: una domanda che ti appartiene.";
+
+const paroleDio = [
+  "SPERANZA",
+  "RISPOSTA",
+  "FEDE",
+  "AMORE",
+  "INVENZIONE",
+  "LUCE",
+  "SOLE",
+  "PERDONO",
+  "MIRACOLI",
+  "VITA",
+  "PRESENTE",
+  "CREATORE",
+  "PROTETTORE",
+];
+
+const domandeDifficili = [
+  {
+    domanda: "Chi ha inventato gli dei?",
+    piste: [
+      "C'e' chi parte dalla paura: quando il mondo sembra troppo grande, l'essere umano prova a dargli un volto.",
+      "C'e' chi parte dalla meraviglia: cielo, nascita, morte, natura diventano domande piu' grandi di noi.",
+      "C'e' chi sospetta un'invenzione, ma non per forza una bugia: forse un modo umano di cercare senso.",
+    ],
+  },
+  {
+    domanda: "Se Dio ha creato noi, chi ha creato Dio?",
+    piste: [
+      "Qualcuno risponde con la fede: Dio non comincia, non nasce, non viene creato.",
+      "Qualcuno resta nel dubbio: la domanda sembra mandare in crisi il nostro bisogno di inizio e fine.",
+      "Qualcuno distingue: per un credente la risposta e' una, per un ateo la domanda cambia direzione.",
+    ],
+  },
+  {
+    domanda: "Come si sceglie la propria religione?",
+    piste: [
+      "Forse non si sceglie come un gusto: spesso ci si nasce dentro, poi si decide se restare, uscire, cercare.",
+      "Una religione puo' sembrare vera quando non ti rende finto, obbligato o piu' piccolo.",
+      "La domanda non e' solo quale religione scegliere, ma che persona diventi mentre credi, dubiti o cerchi.",
+    ],
+  },
+];
+
+const tipologieDio = [
+  {
+    tipo: "Il Dio dell'ordine",
+    descrizione:
+      "Nasce dal desiderio che il mondo non sia lasciato al caos. Non cerca solo punizioni: cerca giustizia, limite, riparazione.",
+    domanda: "Se potessi dare una sola legge al mondo, quale sarebbe?",
+  },
+  {
+    tipo: "Il Dio empatico",
+    descrizione:
+      "Non vuole essere temuto, ma capito. Chiede amore, rispetto, verita'. Assomiglia al bisogno di essere visti senza essere giudicati subito.",
+    domanda: "Un Dio che capisce tutto di te ti farebbe sentire libero o sorvegliato?",
+  },
+  {
+    tipo: "Il Dio libertario",
+    descrizione:
+      "Non governa ogni gesto. Lascia spazio alla scelta, anche quando questo rende il mondo piu' difficile da capire.",
+    domanda: "Un Dio che non interviene mai e' assente o rispettoso?",
+  },
+  {
+    tipo: "Il Dio della natura",
+    descrizione:
+      "Parte dalla Terra ferita, dagli animali, dal futuro del pianeta. E' un Dio pensato a partire da cio' che rischiamo di distruggere.",
+    domanda: "Se la Terra potesse parlare, cosa chiederebbe a Dio?",
+  },
+  {
+    tipo: "Il Dio incarnato",
+    descrizione:
+      "Non resta lontano. Scende, guarda, ascolta, prova a capire. Non domina dall'alto: entra nella vita concreta.",
+    domanda: "Se Dio venisse a scuola per un giorno, cosa noterebbe?",
+  },
+];
+
+const immaginiAldila = [
+  {
+    titolo: "Relazione",
+    testo: "Il dopo come possibilita' di ritrovare chi si ama, non come eternita' solitaria.",
+  },
+  {
+    titolo: "Luce",
+    testo: "Uno spazio non facile da descrivere: luminoso, sospeso, piu' simile a uno stato che a un luogo.",
+  },
+  {
+    titolo: "Nulla",
+    testo: "Per alcuni il dopo resta vuoto, buio, assenza. Anche questa risposta va ascoltata, senza correggerla subito.",
+  },
+  {
+    titolo: "Ritorno",
+    testo: "L'idea che qualcosa ricominci: reincarnazione, memoria, possibilita' di rivedere la vita da un'altra distanza.",
+  },
+  {
+    titolo: "Perdono",
+    testo: "Il dopo come occasione per lasciare andare cio' che non si e' riusciti a sciogliere prima.",
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="question-hero">
+    <p class="section-kicker">La domanda</p>
+    <h1>Dio come parola difficile</h1>
+    <p class="hero-copy">
+      Non una definizione. Non una risposta gia' pronta.<br />
+      Una parola che ognuno porta diversa, e che vale la pena guardare da vicino.
+    </p>
+  </section>
+
+  <section class="question-section">
+    <p class="section-kicker">Da dove partiamo</p>
+    <h2>Dio con una parola</h2>
+    <p class="body-copy">
+      Il primo passo e' semplice e scomodo: provare a dire Dio con una sola parola.
+      Non per trovare la parola giusta, ma per capire quale immagine abbiamo gia' in testa.
+    </p>
+
+    <div class="word-cloud" aria-label="Parole su Dio raccolte e aggregate in classe">
+      {paroleDio.map((parola) => <span class="word-chip">{parola}</span>)}
+    </div>
+
+    <p class="source-note">Risposte anonime, aggregate e rielaborate da attivita' svolte in classe.</p>
+
+    <blockquote class="student-note">
+      <p>
+        Una parola come <strong>INVENZIONE</strong> sposta subito la conversazione:
+        forse Dio e' una presenza, forse e' un'idea, forse e' una costruzione umana.
+        La domanda comincia proprio quando nessuna ipotesi basta da sola.
+      </p>
+    </blockquote>
+
+    <div class="visitor-question">
+      <p>Quale parola sceglieresti tu?</p>
+      <span>Puoi anche scegliere: non lo so.</span>
+    </div>
+  </section>
+
+  <section class="question-section section-band">
+    <div class="section-inner">
+      <p class="section-kicker">Domande che restano</p>
+      <h2>Le domande difficili</h2>
+      <p class="body-copy">
+        Alcune domande su Dio non si chiudono con una frase. Si aprono, si discutono,
+        cambiano mentre cresci. Qui trovi alcune piste nate dal lavoro in classe,
+        raccolte in forma anonima e sintetica.
+      </p>
+
+      <div class="question-accordion">
+        {domandeDifficili.map((item) => (
+          <details class="accordion-item">
+            <summary>{item.domanda}</summary>
+            <ul>
+              {item.piste.map((pista) => <li>{pista}</li>)}
+            </ul>
+          </details>
+        ))}
+      </div>
+
+      <div class="visitor-question">
+        <p>C'e' una domanda su Dio che non riesci a chiudere?</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="question-section">
+    <p class="section-kicker">Un esperimento mentale</p>
+    <h2>Se io fossi Dio</h2>
+    <p class="body-copy">
+      Immaginare di essere una divinita' non serve a giocare con l'onnipotenza.
+      Serve a scoprire cosa desideriamo davvero: ordine, liberta', cura, giustizia,
+      vicinanza, futuro.
+    </p>
+
+    <div class="god-grid">
+      {tipologieDio.map((tipo) => (
+        <article class="god-card">
+          <h3>{tipo.tipo}</h3>
+          <p>{tipo.descrizione}</p>
+          <strong>{tipo.domanda}</strong>
+        </article>
+      ))}
+    </div>
+
+    <blockquote class="student-note large-note">
+      <p>
+        Quando gli adolescenti immaginano Dio, non disegnano una risposta unica.
+        Disegnano una costellazione: desiderio di giustizia, paura del controllo,
+        bisogno di cura, rabbia per il male, nostalgia di qualcuno che veda davvero.
+      </p>
+    </blockquote>
+  </section>
+
+  <section class="question-section section-band">
+    <div class="section-inner">
+      <p class="section-kicker">Una domanda di quinta</p>
+      <h2>Come immagini il dopo?</h2>
+      <p class="body-copy">
+        L'aldila' non e' solo un contenuto delle religioni. E' anche il modo in cui
+        proviamo a pensare il limite, la perdita, il desiderio che qualcosa non finisca
+        nel nulla.
+      </p>
+
+      <div class="afterlife-list">
+        {immaginiAldila.map((voce) => (
+          <article class="afterlife-item">
+            <h3>{voce.titolo}</h3>
+            <p>{voce.testo}</p>
+          </article>
+        ))}
+      </div>
+
+      <p class="source-note">Sintesi anonima e aggregata da testi scritti dagli studenti.</p>
+
+      <div class="visitor-question">
+        <p>E tu, come lo immagini?</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="question-section guide-section">
+    <p class="section-kicker">Domanda guida</p>
+    <h2>Dio e' una parola che chiude il discorso o apre una ricerca?</h2>
+    <div class="guide-questions">
+      <p>Che cosa ti viene in mente quando senti la parola Dio?</p>
+      <p>Dio e' una risposta o una domanda?</p>
+      <p>Si puo' cercare Dio anche senza sapere se ci si crede?</p>
+    </div>
+  </section>
+
+  <section class="question-section submit-section">
+    <p class="section-kicker">Lascia una traccia</p>
+    <h2>La tua domanda su Dio</h2>
+    <p class="body-copy">
+      Questa funzione sara' attivata solo dopo aver configurato raccolta, moderazione
+      e privacy in modo corretto. Per ora resta una promessa di metodo: non raccogliere
+      dati prima di sapere come custodirli.
+    </p>
+
+    <div class="disabled-form" aria-label="Modulo non ancora attivo">
+      <label for="domanda-testo">La domanda che non riesco a chiudere e'...</label>
+      <textarea id="domanda-testo" rows="4" maxlength="300" disabled></textarea>
+      <p>Nessun invio e' attivo in questa versione pubblica.</p>
+      <button type="button" disabled>Invio non ancora attivo</button>
+    </div>
+  </section>
+
+  <SubpageNav pages={[
+    { href: "/la-domanda/dio-in-una-parola/", title: "Dio in una parola", kicker: "Esperienza" },
+    { href: "/la-domanda/immagini-di-dio/", title: "Immagini di Dio", kicker: "Galleria" },
+    { href: "/la-domanda/credere-non-credere-cercare/", title: "Credere, non credere, cercare", kicker: "Dialogo" },
+  ]} />
+</BaseLayout>
+
+<style>
+  .question-hero,
+  .question-section {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 5rem 1.5rem;
+  }
+
+  .question-hero {
+    padding-top: 6rem;
+    text-align: center;
+  }
+
+  .section-band {
+    background: var(--bg-soft);
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-inner {
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 0 1.5rem;
+  }
+
+  .section-kicker {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.85rem;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 7vw, 4.2rem);
+    line-height: 1.02;
+    margin: 0 0 1.25rem;
+  }
+
+  h2 {
+    font-size: clamp(1.55rem, 4vw, 2.35rem);
+    line-height: 1.12;
+    margin: 0 0 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.65rem;
+  }
+
+  .hero-copy,
+  .body-copy {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0 0 1.5rem;
+  }
+
+  .hero-copy {
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+
+  .word-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 2rem 0;
+  }
+
+  .word-chip {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .word-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .source-note {
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 1rem 0 0;
+  }
+
+  .student-note {
+    background: rgba(246, 237, 219, 0.035);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    margin: 2rem 0;
+    padding: 1rem 1.35rem;
+  }
+
+  .student-note p {
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .large-note {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    text-align: center;
+  }
+
+  .visitor-question {
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    margin-top: 2.25rem;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .visitor-question p {
+    color: var(--cream);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  .visitor-question span {
+    color: var(--muted);
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.45rem;
+  }
+
+  .question-accordion {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .accordion-item {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .accordion-item summary {
+    color: var(--cream);
+    cursor: pointer;
+    font-family: var(--font-body);
+    list-style: none;
+    padding: 1rem 1.15rem;
+  }
+
+  .accordion-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .accordion-item summary::after {
+    color: var(--accent);
+    content: "+";
+    float: right;
+  }
+
+  .accordion-item[open] summary::after {
+    content: "-";
+  }
+
+  .accordion-item ul {
+    border-top: 1px solid var(--line);
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 1.15rem 1.2rem;
+  }
+
+  .accordion-item li {
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .god-grid,
+  .afterlife-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .god-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .god-card,
+  .afterlife-item {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 1.15rem;
+  }
+
+  .god-card p,
+  .afterlife-item p {
+    color: var(--muted);
+    font-size: 0.94rem;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .god-card strong {
+    color: var(--accent);
+    display: block;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 0.9rem;
+  }
+
+  .afterlife-item {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .guide-section {
+    text-align: center;
+  }
+
+  .guide-questions {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .guide-questions p {
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 1.08rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .submit-section {
+    border-top: 1px solid var(--line);
+  }
+
+  .disabled-form {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .disabled-form label,
+  .disabled-form p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .disabled-form textarea {
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--cream);
+    font: inherit;
+    padding: 0.85rem;
+    resize: vertical;
+  }
+
+  .disabled-form button {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--muted);
+    justify-self: start;
+    padding: 0.65rem 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .question-hero,
+    .question-section {
+      padding: 3.5rem 1.1rem;
+    }
+
+    .section-inner {
+      padding: 0 1.1rem;
+    }
+
+    .disabled-form button {
+      justify-self: stretch;
+    }
+  }
+</style>

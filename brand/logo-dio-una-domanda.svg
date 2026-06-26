@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">DIO. UNA DOMANDA</title>
+  <desc id="desc">Logo del sito DIO. UNA DOMANDA con punto interrogativo, germoglio e testo.</desc>
+  <defs>
+    <style>
+      .cream { fill: #f6eddb; }
+      .cream-stroke {
+        fill: none;
+        stroke: #f6eddb;
+        stroke-width: 19;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .seed { fill: #ff6548; }
+      .seed-light { fill: #ff9c82; opacity: .75; }
+      .text {
+        fill: #f6eddb;
+        font-family: Arial Black, Arial, Helvetica, sans-serif;
+        font-size: 86px;
+        font-weight: 900;
+        letter-spacing: 1px;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(0 0)">
+    <path class="cream-stroke" d="M145 118C149 70 184 50 229 50c52 0 86 34 86 78 0 43-30 68-68 95-27 19-38 38-38 69"/>
+    <path class="cream-stroke" d="M352 82v196"/>
+    <path class="cream" d="M74 308c29-52 93-51 125-22-38 18-82 24-125 22z"/>
+    <path class="cream" d="M318 308c-29-52-93-51-125-22 38 18 82 24 125 22z"/>
+    <ellipse class="seed" cx="196" cy="307" rx="38" ry="32"/>
+    <ellipse class="seed-light" cx="196" cy="302" rx="30" ry="10"/>
+  </g>
+
+  <g transform="translate(422 0)">
+    <text class="text" x="0" y="156">DIO. UNA</text>
+    <text class="text" x="0" y="249">DOMANDA</text>
+  </g>
+</svg>

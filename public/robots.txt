@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dio-una-domanda.netlify.app/sitemap-index.xml

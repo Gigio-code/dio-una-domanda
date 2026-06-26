@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import StudyBlocks from "../components/StudyBlocks.astro";
+import SubpageNav from "../components/SubpageNav.astro";
+import { publicPages } from "../data/site";
+
+const page = publicPages.religioni;
+---
+
+<BaseLayout title={page.eyebrow} description={page.intro}>
+  <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
+  <section class="section shell">
+    <StudyBlocks guide={page.guide} forYou={page.forYou} inClass={page.inClass} symbol={page.symbol} crosses={page.crosses} activities={page.activities} cards={page.cards} archive={page.archive} />
+  </section>
+
+  <SubpageNav pages={[
+    { href: "/religioni/riti/", title: "Riti", kicker: "Laboratorio" },
+    { href: "/religioni/corpo/", title: "Corpo", kicker: "Esperienza" },
+    { href: "/religioni/cibo/", title: "Cibo", kicker: "Tavola" },
+    { href: "/religioni/preghiera/", title: "Preghiera", kicker: "Ascolto" },
+    { href: "/religioni/abe-dividere-unire/", title: "Abe: dividere e unire", kicker: "Film" },
+    { href: "/religioni/liberta-religiosa-pluralismo/", title: "Libertà religiosa e pluralismo", kicker: "Mappa" },
+    { href: "/religioni/fratture-generative/", title: "Fratture generative", kicker: "Timeline" },
+    { href: "/religioni/donne-religioni/", title: "Donne e religioni", kicker: "Frontiera" },
+  ]} />
+</BaseLayout>

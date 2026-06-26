@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import StudyBlocks from "../components/StudyBlocks.astro";
+import SubpageNav from "../components/SubpageNav.astro";
+import { publicPages } from "../data/site";
+
+const page = publicPages.mito;
+---
+
+<BaseLayout title={page.eyebrow} description={page.intro}>
+  <PageHero eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
+  <section class="section shell">
+    <StudyBlocks guide={page.guide} forYou={page.forYou} inClass={page.inClass} symbol={page.symbol} crosses={page.crosses} activities={page.activities} cards={page.cards} archive={page.archive} />
+    <div class="question-list question-list--voice">
+      {page.questions.map((question) => <article>{question}</article>)}
+    </div>
+  </section>
+
+  <SubpageNav pages={[
+    { href: "/mito-e-sacro/racconti-origine/", title: "Racconti delle origini", kicker: "Racconto" },
+    { href: "/mito-e-sacro/sacro-profano/", title: "Sacro e profano", kicker: "Laboratorio" },
+    { href: "/mito-e-sacro/religioni-nuovissime/", title: "Religioni nuovissime", kicker: "Gioco" },
+    { href: "/mito-e-sacro/torneo-senso-religioso/", title: "Torneo del senso religioso", kicker: "Laboratorio" },
+  ]} />
+</BaseLayout>

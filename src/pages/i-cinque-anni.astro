@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import SubpageNav from "../components/SubpageNav.astro";
+import { years } from "../data/site";
+---
+
+<BaseLayout title="I cinque anni" description="La sequenza dei cinque anni del percorso DIO. UNA DOMANDA.">
+  <PageHero eyebrow="I cinque anni" title="Cinque soglie, non un programma da subire" intro="Ogni anno apre una domanda diversa: origine, gesti, libertà, coscienza, limite e futuro. Non tutto va detto subito: il percorso deve lasciare curiosità." />
+  <section class="section shell year-stack year-timeline">
+    {years.map((year) => (
+      <article class="year-card year-card--rich">
+        <div class="year-main">
+          <p class="year-number">{year.year}</p>
+          <h2>{year.title}</h2>
+          <p class="lead-small">{year.question}</p>
+          <div class="year-focus">
+            <p class="eyebrow">Domanda per te</p>
+            <h3>{year.forYou}</h3>
+          </div>
+          <div class="year-focus">
+            <p class="eyebrow">In classe</p>
+            <p>{year.inClass}</p>
+          </div>
+        </div>
+        <div class="year-lists">
+          <div><p class="eyebrow">Temi</p><ul>{year.themes.map((theme) => <li>{theme}</li>)}</ul></div>
+          <div><p class="eyebrow">Materiali forti</p><ul>{year.materials.map((material) => <li>{material}</li>)}</ul></div>
+          <div><p class="eyebrow">Attività</p><ul>{year.activities.map((activity) => <li>{activity}</li>)}</ul></div>
+          <details class="archive-details archive-details--year">
+            <summary>Apri archivio</summary>
+            <ul>{year.expandable.map((item) => <li>{item}</li>)}</ul>
+          </details>
+        </div>
+      </article>
+    ))}
+  </section>
+  <SubpageNav pages={[
+    { href: "/i-cinque-anni/prima-origine/", title: "Prima: origine", kicker: "Anno 1" },
+    { href: "/i-cinque-anni/seconda-riti-corpo/", title: "Seconda: riti e corpo", kicker: "Anno 2" },
+    { href: "/i-cinque-anni/terza-liberta-scelta/", title: "Terza: libertà e scelta", kicker: "Anno 3" },
+    { href: "/i-cinque-anni/quarta-legge-frontiera/", title: "Quarta: legge e frontiera", kicker: "Anno 4" },
+    { href: "/i-cinque-anni/quinta-limite-futuro/", title: "Quinta: limite e futuro", kicker: "Anno 5" },
+  ]} />
+</BaseLayout>

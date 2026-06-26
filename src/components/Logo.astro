@@ -1,0 +1,8 @@
+---
+const { compact = false } = Astro.props;
+---
+
+<a class:list={["logo", { "logo--compact": compact }]} href="/">
+  <span class="logo-image" aria-hidden="true"></span>
+  <span class="sr-only">DIO. UNA DOMANDA</span>
+</a>

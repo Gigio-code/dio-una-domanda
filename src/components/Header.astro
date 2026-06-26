@@ -1,0 +1,37 @@
+---
+import Logo from "./Logo.astro";
+import { navItems } from "../data/site";
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <Logo compact />
+    <nav class="nav nav--desktop" aria-label="Menu principale">
+      {navItems.map((item) => {
+        const itemPath = item.href.replace(/\/$/, "") || "/";
+        const active = currentPath === itemPath;
+        return (
+          <a class:list={[{ active }]} href={item.href} aria-current={active ? "page" : undefined}>
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+    <details class="mobile-menu">
+      <summary>Menu</summary>
+      <nav class="nav nav--mobile" aria-label="Menu principale mobile">
+        {navItems.map((item) => {
+          const itemPath = item.href.replace(/\/$/, "") || "/";
+          const active = currentPath === itemPath;
+          return (
+            <a class:list={[{ active }]} href={item.href} aria-current={active ? "page" : undefined}>
+              {item.label}
+            </a>
+          );
+        })}
+      </nav>
+    </details>
+  </div>
+</header>

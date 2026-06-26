@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import SubpageNav from "../components/SubpageNav.astro";
+---
+
+<BaseLayout
+  title="La domanda resta aperta"
+  description="La pagina finale del percorso DIO. UNA DOMANDA."
+>
+  <PageHero
+    eyebrow="Pagina finale"
+    title="La domanda resta aperta"
+    intro="Alla fine dei cinque anni non devi per forza avere una risposta definitiva. Ma dovresti avere domande più vere."
+  />
+  <section class="section shell prose">
+    <p>
+      Dovresti sapere che Dio, la religione, la coscienza, il bene, il male, la
+      morte, la libertà e il futuro non sono argomenti "da studiare e basta".
+    </p>
+    <p>
+      Sono luoghi in cui si decide lentamente che persona stai diventando.
+    </p>
+  </section>
+  <SubpageNav pages={[
+    { href: "/la-domanda-resta-aperta/che-cosa-sto-diventando/", title: "Che cosa sto diventando?", kicker: "Traccia finale" },
+  ]} />
+</BaseLayout>
